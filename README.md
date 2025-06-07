@@ -1,42 +1,30 @@
-# Portfolio Blog Starter
+# yazzone
 
-This is a porfolio site template complete with a blog. Includes:
+This is the open-source code for my personal portfolio site, [yaz.zone](https://yaz.zone). 
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+I believe in building in public, so feel free to fork this repository, explore the code, and adapt it to create your own personal website. It's built with Next.js and Tailwind CSS, and designed to be easily customizable.
 
-## Demo
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-https://portfolio-blog-starter.vercel.app
+## Running Locally
 
-## How to Use
+To get started, you'll need to have [pnpm](https://pnpm.io/installation) installed.
 
-You can choose from one of the following two methods to use this repository:
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/plawlost/yazzone.git
+    ```
+2.  Navigate to the project directory:
+    ```bash
+    cd yazzone
+    ```
+3.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
+4.  Run the development server:
+    ```bash
+    pnpm dev
+    ```
 
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
-```
-
-Then, run Next.js in development mode:
-
-```bash
-pnpm dev
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+Your site should now be running at [http://localhost:3000](http://localhost:3000).
