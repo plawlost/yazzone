@@ -18,7 +18,7 @@ export default function Page() {
 
   const homepageText = `
     Hi there, I'm Yaz, 16, building what Silicon Valley forgot.
-    Full-time founder at PlawLabs since '22. Remotely, based in London.
+    Full-time founder at PlawLabs since '22. Digital nomad, remotely based in London.
     Dropped out to build agent-native tools, write iconoclastic essays, and live like the internet's still a frontier.
     Teenage years aren't for waiting. They're for shipping and betting.
     ${backstory}
