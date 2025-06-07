@@ -1,20 +1,28 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import { getEssays, getEssay, Metadata } from 'app/essays/utils'
+import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
+import { TldrButton } from 'app/components/tldr-button'
 
 export async function generateStaticParams() {
-  let posts = getBlogPosts()
+  let posts = getEssays()
 
   return posts.map((post) => ({
     slug: post.slug,
   }))
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  let post: {
+    metadata: Metadata;
+    slug: string;
+    content: string;
+  } | undefined = getEssays().find((post) => post.slug === params.slug);
+
   if (!post) {
-    return
+    return null
   }
 
   let {
@@ -35,7 +43,7 @@ export function generateMetadata({ params }) {
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/essays/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -51,15 +59,21 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export default function Blog({ params }: { params: { slug: string } }) {
+  let post = getEssay(params.slug)
 
   if (!post) {
     notFound()
   }
 
   return (
-    <section>
+    <section className="max-w-4xl mx-auto">
+      <Link
+        href="/essays"
+        className="text-sm underline decoration-1 underline-offset-2 text-black/60 hover:text-black transition-colors mb-8 block"
+      >
+        ← Return to all essays
+      </Link>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -74,7 +88,7 @@ export default function Blog({ params }) {
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
+            url: `${baseUrl}/essays/${post.slug}`,
             author: {
               '@type': 'Person',
               name: 'My Portfolio',
@@ -82,17 +96,24 @@ export default function Blog({ params }) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
+      <div className="flex flex-col-reverse sm:flex-row justify-between items-start mb-4 space-y-4 sm:space-y-0">
+        <h1 className="title font-bold text-3xl sm:text-4xl tracking-tighter">
+          {post.metadata.title}
+        </h1>
+      </div>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          {post.metadata.readingTime}
+        </p>
       </div>
-      <article className="prose">
+      <article className="prose prose-sm sm:prose-base dark:prose-invert max-w-none">
         <CustomMDX source={post.content} />
       </article>
+      
+      <TldrButton text={post.content} isFloating={true} />
     </section>
   )
 }

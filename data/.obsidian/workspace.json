@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "fcf4dac8bc3e369b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bdba4432762ab5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ffb420500a79a77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "essays/childhood-was-a-scam.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "childhood-was-a-scam"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9fcfa0e49135e027",
+    "type": "split",
+    "children": [
+      {
+        "id": "d75fbaf998ef6850",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b66c2b8ed57d612e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ab284148f266b298",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3f964ef31a96dd1c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b94b56f2e9fcee36",
+    "type": "split",
+    "children": [
+      {
+        "id": "695bc31f2a56cd8a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "305021496bb811f4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "essays/childhood-was-a-scam.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for childhood-was-a-scam"
+            }
+          },
+          {
+            "id": "b0184a6f1d6685a1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "essays/childhood-was-a-scam.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from childhood-was-a-scam"
+            }
+          },
+          {
+            "id": "68af0b3268513927",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3fb08da7c4be7bab",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "essays/childhood-was-a-scam.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of childhood-was-a-scam"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b66c2b8ed57d612e",
+  "lastOpenFiles": [
+    "essays/example.md",
+    "essays/ai-eyes-on-us.md",
+    "essays/next-default-action.md",
+    "essays/childhood-was-a-scam.md",
+    "home.md",
+    "backstory.md",
+    "backstory 2.md"
+  ]
+}
