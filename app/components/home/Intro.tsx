@@ -16,7 +16,7 @@ export function Intro() {
         >
           PlawLabs
         </a>{' '}
-        since '22. Digital nomad, remotely based in London.
+        since '22. Nomad, remotely based in London.
         <br />
         Dropped out to build agent-native tools, write iconoclastic essays, and live like the internet's still a frontier.
         <br />
