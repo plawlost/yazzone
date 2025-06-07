@@ -1,6 +1,6 @@
 ---
 title: "The next default action after 'Google it'"
-date: "2025-02-02"
+publishedAt: "2025-02-02"
 ---
 
 In the early days of the internet, Google was a revelation—a tool that made the vast world of information instantly accessible. A simple search turned the unknown into the known. But as our digital universe expanded, so did our challenges. We are now drowning in an ocean of articles, podcasts, videos, and research papers. The issue isn't a lack of information; it's that the sheer volume has made clarity a rare commodity.
