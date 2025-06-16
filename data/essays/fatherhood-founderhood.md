@@ -13,7 +13,7 @@ The difference is they're building humans instead of companies.
 
 Here's what both fathers and founders do that most people don't: they see systems, not events.
 
-When I was twelve and started lying about homework, most parents would have focused on the lying. My dad saw a feedback loop. He realized I was lying because the consequences of truth felt worse than the consequences of deception. So instead of punishing the symptom, he redesigned the system.
+When I was eleven and started lying about homework, most parents would have focused on the lying. My dad saw a feedback loop. He realized I was lying because the consequences of truth felt worse than the consequences of deception. So instead of punishing the symptom, he redesigned the system.
 
 He made it so that telling the truth about problems led to help, not punishment. Lying led to lost trust, which meant lost autonomy. Within a month, I was volunteering information about mistakes before he even asked.
 
@@ -35,7 +35,7 @@ Smart parents optimize for report cards. Wise parents optimize for capabilities.
 
 Here's something I learned watching my dad that most leadership books get wrong: the best way to develop people isn't to give them easy wins. It's to give them hard problems with good support.
 
-When I was fifteen, he put me in charge of planning a family trip. Not just picking activities - handling budget, logistics, backup plans, everything. When I got overwhelmed, he didn't take over. He asked questions that helped me think through the problems myself.
+At the age of twelve, he put me in charge of planning a family trip. Not just picking activities - handling budget, logistics, backup plans, everything. When I got overwhelmed, he didn't take over. He asked questions that helped me think through the problems myself.
 
 "What happens if the flight gets canceled?"
 "How do you know if we're spending too much?"
