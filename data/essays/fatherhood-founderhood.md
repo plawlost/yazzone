@@ -5,11 +5,6 @@ summary: "The best fathers I know aren't the ones who had it all figured out. Th
 image: "https://l3ayrrdw1bycdk82.public.blob.vercel-storage.com/fatherhoodghibli-Tv9wYj4TQEAa15Lh8EQaOups2sbsyj"
 featured: true
 ---
-
-# Fatherhood = Founderhood
-
-*June 2025*
-
 My dad never founded a company. He was a governor, then a trader - someone who navigated politics and markets, not pitch decks and term sheets. But watching him operate for sixteen years, I've noticed something most people miss: great fathers use the exact same mental models as great founders.
 
 The difference is they're building humans instead of companies.
