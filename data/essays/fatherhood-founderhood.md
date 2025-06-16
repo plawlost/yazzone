@@ -79,7 +79,7 @@ By the time I hit my teenage years, that capital compound had grown huge. I want
 
 Great founders make asymmetric bets: investments where the downside is limited but the upside is unlimited. Great fathers think the same way.
 
-When I wanted to start a business at fourteen, most parents would have said "focus on school." My dad said "let's figure out how to do both." The downside was maybe my grades would slip a little. The upside was I'd learn more about business in six months than most people learn in six years.
+When I wanted to start a business at thirteen, most parents would have said "focus on school." My dad said "let's figure out how to do both." The downside was maybe my grades would slip a little. The upside was I'd learn more about business in six months than most people learn in six years.
 
 When I wanted to travel alone at fifteen, most parents would have said "too dangerous." My dad said "let's make a plan." We spent weeks thinking through scenarios, backup plans, check-in schedules. The downside was manageable risk. The upside was confidence, independence, and real-world experience.
 
