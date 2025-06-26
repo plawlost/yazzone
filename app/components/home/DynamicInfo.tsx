@@ -10,7 +10,7 @@ export function DynamicInfo() {
   const [daysUntilDeadline, setDaysUntilDeadline] = useState<number>(0)
   const [loading, setLoading] = useState(true)
 
-  const myLocation = { lat: 39.8829, lon: 32.7960 } // Mevlana Sk, Ahmet Taner Kislali Mahallesi, Cankaya, Ankara
+  const myLocation = { lat: 39.8829, lon: 32.7960 }
   const deadlineDate = new Date('2025-08-30') // August 30th deadline
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export function DynamicInfo() {
   return (
     <section className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center text-base text-black/60 dark:text-white/60 sm:space-x-2">
-        <span>Currently in <WikipediaLink keyword="Eastern Europe">Eastern Europe</WikipediaLink></span>
+        <span>Currently in <WikipediaLink keyword="Southeast Europe">Southeast Europe</WikipediaLink></span>
         <span className="hidden sm:inline text-black/30 dark:text-white/30">|</span>
         <span>{getCountdownText()}</span>
         {distance !== null && (
