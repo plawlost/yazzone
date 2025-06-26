@@ -80,19 +80,19 @@ export function DynamicInfo() {
 
   return (
     <section className={`transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center text-base text-black/60 sm:space-x-2">
-        <span>Currently in <WikipediaLink keyword="Ankara">Ankara</WikipediaLink>, Turkey</span>
-        <span className="hidden sm:inline text-black/30">|</span>
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center text-base text-black/60 dark:text-white/60 sm:space-x-2">
+        <span>Currently in <WikipediaLink keyword="Eastern Europe">Eastern Europe</WikipediaLink></span>
+        <span className="hidden sm:inline text-black/30 dark:text-white/30">|</span>
         <span>{getCountdownText()}</span>
         {distance !== null && (
           <>
-            <span className="hidden sm:inline text-black/30">|</span>
+            <span className="hidden sm:inline text-black/30 dark:text-white/30">|</span>
             <span>About {distance.toLocaleString()} km away from you</span>
           </>
         )}
         {time && (
           <>
-            <span className="hidden sm:inline text-black/30">|</span>
+            <span className="hidden sm:inline text-black/30 dark:text-white/30">|</span>
             <span>{time} local time, busy this {dayPeriod}</span>
           </>
         )}

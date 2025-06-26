@@ -15,7 +15,7 @@ export function WikipediaLink({ keyword, children, className }: WikipediaLinkPro
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`underline decoration-dotted underline-offset-2 hover:text-black transition-colors ${className}`}
+      className={`underline decoration-dotted underline-offset-2 hover:text-black dark:hover:text-white transition-colors ${className}`}
       title={`Read about ${keyword} on Wikipedia`}
     >
       {children}

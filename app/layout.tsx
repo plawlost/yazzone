@@ -1,15 +1,12 @@
 import './global.css'
 import type { Metadata } from 'next'
-import { IBM_Plex_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
 import { CookieNotice } from 'app/components/CookieNotice'
-
-const plex = IBM_Plex_Sans({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-})
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+import { ThemeProvider } from 'app/components/theme-provider'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -25,6 +22,14 @@ export const metadata: Metadata = {
     siteName: 'Yaz Celebi',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${baseUrl}/og`,
+        width: 1200,
+        height: 630,
+        alt: 'Yaz Celebi',
+      },
+    ],
   },
   robots: {
     index: true,
@@ -41,9 +46,12 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   keywords: ['Yaz Celebi', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
 }
-
-const cx = (...classes) => classes.filter(Boolean).join(' ')
 
 export default function RootLayout({
   children,
@@ -53,18 +61,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cx(
-        'text-black bg-white',
-        plex.className
-      )}
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
     >
       <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <CookieNotice />
-        </main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
+            {children}
+            <Analytics />
+            <SpeedInsights />
+            <CookieNotice />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )

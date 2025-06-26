@@ -10,6 +10,7 @@ import { FeaturedEssays } from 'app/components/home/FeaturedEssays'
 import { Projects } from 'app/components/home/Projects'
 import { DynamicInfo } from 'app/components/home/DynamicInfo'
 import { WikipediaLink } from 'app/components/WikipediaLink'
+import { ThemeToggle } from 'app/components/ThemeToggle'
 
 export default function Page() {
   const allEssays = getEssays()
@@ -29,18 +30,21 @@ export default function Page() {
 
   return (
     <div className="space-y-16 max-w-4xl">
-      <header className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-        <Image
-          src="/favicon.ico"
-          alt="Yaz Celebi"
-          width={80}
-          height={80}
-          className="rounded-full"
-        />
-        <div className="space-y-1">
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Yagiz E. Celebi.</h1>
-          <p className="text-lg sm:text-xl pl-0.5 sm:pl-1">Founder. Architect. Outlier.</p>
+      <header className="flex flex-col sm:flex-row items-start sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <div className="flex items-center space-x-6">
+          <Image
+            src="/favicon.ico"
+            alt="Yaz Celebi"
+            width={80}
+            height={80}
+            className="rounded-full"
+          />
+          <div className="space-y-1">
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Yagiz E. Celebi.</h1>
+            <p className="text-lg sm:text-xl pl-0.5 sm:pl-1">Founder. Architect. Outlier.</p>
+          </div>
         </div>
+        <ThemeToggle />
       </header>
 
       <Intro />
@@ -51,14 +55,14 @@ export default function Page() {
       
       <section className="space-y-6">
         <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:space-x-6 sm:space-y-0">
-          <h2 className="text-2xl font-bold bg-orange-50 px-3 py-2 rounded-lg inline-block w-fit">Now</h2>
+          <h2 className="text-2xl font-bold bg-orange-50 text-orange-800 dark:bg-orange-900 dark:text-orange-200 px-3 py-2 rounded-lg inline-block w-fit">Now</h2>
           <div className="flex items-center">
             <Image
               src="/sketch.svg"
               alt="Take me to SF sketch"
               width={140}
               height={90}
-              className="opacity-80"
+              className="opacity-80 dark:invert"
             />
           </div>
         </div>
@@ -68,7 +72,7 @@ export default function Page() {
         
         {/* Coding Stats */}
         <div className="mt-8 space-y-3">
-          <p className="text-sm text-black/60">When I'm not in meetings or strategizing, I still ship code & design:</p>
+          <p className="text-sm text-black/60 dark:text-white/60">When I'm not in meetings or strategizing, I still ship code & design:</p>
           <div className="flex">
             <img
               src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Dev+Time&layout=compact&cache_seconds=0&langs_count=6"
@@ -100,7 +104,7 @@ export default function Page() {
               height={400}
               className="w-full object-cover"
             />
-            <div className="mt-4 text-sm text-black/60">
+            <div className="mt-4 text-sm text-black/60 dark:text-white/60">
               <p>Current commit, and the first one.</p>
             </div>
           </div>
@@ -108,20 +112,20 @@ export default function Page() {
       </section>
 
       <footer className="pt-16 pb-8 space-y-6">
-        <p className="text-lg text-black/80">
+        <p className="text-lg text-black/80 dark:text-white/80">
           Still reading? Maybe you're one of us. Reach out.
         </p>
 
         <div className="space-y-2">
-          <p className="text-base text-black/80">I reply to every real message within a day.</p>
-          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60">
+          <p className="text-base text-black/80 dark:text-white/80">I reply to every real message within a day.</p>
+          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
               <a href="mailto:yaz@plawlabs.com" className="underline">yaz@plawlabs.com</a>
               <a href="tel:+16283034902" className="underline">+1 (628) 303-4902</a>
           </div>
         </div>
         
-        <div className="border-t border-black/10 pt-6">
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60">
+        <div className="border-t border-black/10 dark:border-white/10 pt-6">
+            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
               <a
                 href="https://x.com/plawlost"
                 target="_blank"
@@ -129,7 +133,7 @@ export default function Page() {
                 className="underline"
                 aria-label="X (best way to reach me)"
               >
-                X <span className="text-xs text-black/40">(best)</span>
+                X <span className="text-xs text-black/40 dark:text-white/40">(best)</span>
               </a>
               <a
                 href="https://instagram.com/plawlost"
@@ -138,7 +142,7 @@ export default function Page() {
                 className="underline"
                 aria-label="Instagram (rarely active)"
               >
-                Instagram <span className="text-xs text-black/40">(barely active)</span>
+                Instagram <span className="text-xs text-black/40 dark:text-white/40">(barely active)</span>
               </a>
               <a
                 href="https://github.com/plawlost"
@@ -147,7 +151,7 @@ export default function Page() {
                 className="underline"
                 aria-label="GitHub (barely active)"
               >
-                GitHub <span className="text-xs text-black/40">(kinda new)</span>
+                GitHub <span className="text-xs text-black/40 dark:text-white/40">(kinda new)</span>
               </a>
             </div>
         </div>

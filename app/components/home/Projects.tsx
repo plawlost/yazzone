@@ -1,7 +1,7 @@
 export function Projects({ projects }) {
   return (
     <section className="space-y-6">
-      <h2 className="text-2xl font-bold bg-purple-50 px-3 py-2 rounded-lg inline-block">Projects</h2>
+      <h2 className="text-2xl font-bold bg-purple-50 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-3 py-2 rounded-lg inline-block">Projects</h2>
       <div className="space-y-4">
         {projects.map((project) => (
           <div key={project.title} className="flex items-baseline space-x-4">

@@ -3,88 +3,99 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
-  const title = searchParams.get('title') || 'Yagiz E. Celebi'
+  const [geistRegular, geistBold] = await Promise.all([
+    fetch(new URL('../../../public/Geist-Regular.otf', import.meta.url)).then((res) => res.arrayBuffer()),
+    fetch(new URL('../../../public/Geist-Bold.otf', import.meta.url)).then((res) => res.arrayBuffer()),
+  ])
 
-  const fontData = await fetch(
-    new URL('https://assets.yaz.zone/Geist-Bold.otf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
+  try {
+    const { searchParams } = new URL(request.url)
 
-  const favicon = await fetch(new URL('https://yaz.zone/favicon.ico', import.meta.url)).then(
-    (res) => res.arrayBuffer()
-  )
+    const hasTitle = searchParams.has('title')
+    const title = hasTitle
+      ? searchParams.get('title')?.slice(0, 100)
+      : 'Founder, Thinker, Nonconformist.'
 
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#0a0a0a',
-          color: '#e5e5e5',
-          fontFamily: '"Geist"',
-          padding: '40px',
-        }}
-      >
-        <img
-          // @ts-ignore
-          src={favicon}
-          alt="Favicon"
-          width={80}
-          height={80}
+    return new ImageResponse(
+      (
+        <div
           style={{
-            borderRadius: '50%',
-            marginBottom: '20px',
-            border: '2px solid #262626',
-          }}
-        />
-        <h1
-          style={{
-            fontSize: '60px',
-            fontWeight: 700,
-            lineHeight: 1.1,
-            textAlign: 'center',
-            maxWidth: '80%',
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'black',
+            color: 'white',
+            fontFamily: '"Geist"',
+            padding: '40px',
           }}
         >
-          {title}
-        </h1>
-        <p
-          style={{
-            fontSize: '28px',
-            marginTop: '20px',
-            color: '#a3a3a3',
-          }}
-        >
-          Yagiz E. Celebi
-        </p>
-        <p
-          style={{
-            position: 'absolute',
-            bottom: '40px',
-            fontSize: '24px',
-            color: '#525252',
-          }}
-        >
-          yaz.zone
-        </p>
-      </div>
-    ),
-    {
-      width: 1200,
-      height: 630,
-      fonts: [
-        {
-          name: 'Geist',
-          data: fontData,
-          style: 'normal',
-          weight: 700,
-        },
-      ],
-    }
-  )
+          <div
+            style={{
+              position: 'absolute',
+              top: 40,
+              left: 40,
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: 24,
+              fontWeight: 700,
+            }}
+          >
+            Yagiz E. Celebi
+          </div>
+
+          <div
+            style={{
+              fontSize: 72,
+              fontWeight: 700,
+              lineHeight: 1.1,
+              textAlign: 'center',
+              maxWidth: 1000,
+            }}
+          >
+            {title}
+          </div>
+
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 40,
+              right: 40,
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: 20,
+              color: '#999'
+            }}
+          >
+            yaz.one
+          </div>
+        </div>
+      ),
+      {
+        width: 1200,
+        height: 630,
+        fonts: [
+          {
+            name: 'Geist',
+            data: geistRegular,
+            style: 'normal',
+            weight: 400,
+          },
+          {
+            name: 'Geist',
+            data: geistBold,
+            style: 'normal',
+            weight: 700,
+          },
+        ],
+      }
+    )
+  } catch (e: any) {
+    console.log(`${e.message}`)
+    return new Response(`Failed to generate the image`, {
+      status: 500,
+    })
+  }
 }

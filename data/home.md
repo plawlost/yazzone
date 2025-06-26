@@ -10,7 +10,7 @@ projects:
     description: 'The cognition engine to brief anything. (<strong>shelved</strong>)'
 ---
 
-→ Raising **$500K pre-seed** for VulnZap.
+→ Raising **$2M pre-seed** for VulnZap (at $10M post).
 → Renaming PlawLabs to **Plaw Inc.**, moving to <WikipediaLink keyword="San Francisco">SF</WikipediaLink>.
 → Hiring **2 founding engineers** + a lead designer.
 → I move fast, team with **high-agency people**. And believe in **giving back**.

@@ -19,8 +19,25 @@
   --sh-entity: #000;
 }
 
+html.dark {
+  --sh-class: #fff;
+  --sh-identifier: #fff;
+  --sh-sign: #fff;
+  --sh-string: #fff;
+  --sh-keyword: #fff;
+  --sh-comment: #999;
+  --sh-jsxliterals: #fff;
+  --sh-property: #fff;
+  --sh-entity: #fff;
+}
+
 html {
   min-width: 360px;
+  @apply bg-white text-black;
+}
+
+html.dark {
+  @apply bg-black text-white;
 }
 
 .prose .anchor {
@@ -36,9 +53,17 @@ html {
   @apply underline decoration-black underline-offset-2 decoration-1;
 }
 
+.dark .prose a {
+  @apply decoration-white;
+}
+
 .prose .anchor:after {
   @apply text-black;
   content: '#';
+}
+
+.dark .prose .anchor:after {
+  @apply text-white;
 }
 
 .prose *:hover > .anchor {
@@ -47,6 +72,10 @@ html {
 
 .prose pre {
   @apply bg-neutral-50 overflow-x-auto border border-black py-3 px-4 text-sm;
+}
+
+.dark .prose pre {
+  @apply bg-neutral-900 border-white;
 }
 
 .prose code {
@@ -69,6 +98,10 @@ html {
 
 .prose p {
   @apply my-4 text-black;
+}
+
+.dark .prose p {
+  @apply text-white;
 }
 
 .prose h1 {
@@ -150,4 +183,28 @@ details > summary::-webkit-details-marker {
 
 details[open] > summary {
   margin-bottom: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :root {
+    --cursor-light: url('/cursor-light.svg') 8 8, auto;
+    --cursor-dark: url('/cursor-dark.svg') 8 8, auto;
+  }
+
+  html {
+    cursor: var(--cursor-light);
+  }
+
+  html.dark {
+    cursor: var(--cursor-dark);
+  }
+
+  a, button, summary, input[type='checkbox'], input[type='radio'], select {
+    cursor: pointer;
+  }
+
+  input[type='text'], input[type='email'], textarea, [contenteditable],
+  p, blockquote, li, h1, h2, h3, h4, h5, h6, pre, code {
+    cursor: text;
+  }
 }

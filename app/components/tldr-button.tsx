@@ -39,9 +39,9 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
     ? "fixed bottom-6 right-6 z-40"
     : `relative ${className}`
 
-  const buttonClass = isFloating
-    ? "bg-white/80 backdrop-blur-sm border border-black/10 px-4 py-2 rounded-full shadow-sm text-base underline decoration-1 underline-offset-2 text-black/70 hover:text-black transition-colors"
-    : "text-sm underline decoration-1 underline-offset-2 text-black/60 hover:text-black transition-colors"
+  const buttonClass = isFloating 
+    ? "bg-white/80 dark:bg-black/80 backdrop-blur-sm border border-black/10 dark:border-white/10 px-4 py-2 rounded-full shadow-sm text-base underline decoration-1 underline-offset-2 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors"
+    : "text-sm underline decoration-1 underline-offset-2 text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white transition-colors"
 
   return (
     <div className={containerClass} ref={ref}>
@@ -54,13 +54,13 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 bottom-full mb-2 z-10 w-52 sm:w-56 origin-bottom-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="absolute right-0 bottom-full mb-2 z-10 w-52 sm:w-56 origin-bottom-right rounded-md bg-white dark:bg-black shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 focus:outline-none">
           <div className="py-1">
             <a
               href={chatGptUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               ChatGPT
@@ -69,7 +69,7 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
               href={claudeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Claude
@@ -78,7 +78,7 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
               href={perplexityUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Perplexity
