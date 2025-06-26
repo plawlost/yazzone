@@ -31,7 +31,7 @@ export default function EssaysPage() {
           Subscribe via RSS
         </a>
       </header>
-      <div className="border-t border-black/10 dark:border-white/10">
+      <div className="border-t border-black/10">
         <EssayList essays={allEssays} />
       </div>
     </div>
