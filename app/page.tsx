@@ -75,7 +75,7 @@ export default function Page() {
           <p className="text-sm text-black/60 dark:text-white/60">When I'm not in meetings or strategizing, I still ship code & design:</p>
           <div className="flex">
             <img
-              src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Dev+Time&layout=compact&cache_seconds=0&langs_count=6"
+              src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Programming+Time&layout=compact&cache_seconds=0&langs_count=6"
               alt="Recent coding activity"
               width={420}
               height={150}
