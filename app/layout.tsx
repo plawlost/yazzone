@@ -4,8 +4,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
 import { CookieNotice } from 'app/components/CookieNotice'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
 import { ThemeProvider } from 'app/components/theme-provider'
 
 export const metadata: Metadata = {
@@ -61,9 +59,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+      </head>
       <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">

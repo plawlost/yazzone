@@ -3,10 +3,9 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 export async function GET(request: Request) {
-  const [geistRegular, geistBold] = await Promise.all([
-    fetch(new URL('../../../public/Geist-Regular.otf', import.meta.url)).then((res) => res.arrayBuffer()),
-    fetch(new URL('../../../public/Geist-Bold.otf', import.meta.url)).then((res) => res.arrayBuffer()),
-  ])
+  const geistVariable = await fetch(
+    "https://fonts.gstatic.com/s/geist/v1/s_0d_fK7-5g-IVa-9k4.woff2"
+  ).then((res) => res.arrayBuffer());
 
   try {
     const { searchParams } = new URL(request.url)
@@ -66,6 +65,7 @@ export async function GET(request: Request) {
               display: 'flex',
               alignItems: 'center',
               fontSize: 20,
+              fontWeight: 400,
               color: '#999'
             }}
           >
@@ -79,15 +79,8 @@ export async function GET(request: Request) {
         fonts: [
           {
             name: 'Geist',
-            data: geistRegular,
+            data: geistVariable,
             style: 'normal',
-            weight: 400,
-          },
-          {
-            name: 'Geist',
-            data: geistBold,
-            style: 'normal',
-            weight: 700,
           },
         ],
       }
