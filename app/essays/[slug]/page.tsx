@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CustomMDX } from 'app/components/mdx'
 import { getEssays, getEssay, Metadata } from 'app/essays/utils'
 import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
-import { TldrButton } from 'app/components/tldr-button'
 
 export async function generateStaticParams() {
   let posts = getEssays()
@@ -15,11 +15,7 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  let post: {
-    metadata: Metadata;
-    slug: string;
-    content: string;
-  } | undefined = getEssays().find((post) => post.slug === params.slug);
+  let post = getEssays().find((post) => post.slug === params.slug);
 
   if (!post) {
     return null
@@ -28,33 +24,33 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   let {
     title,
     publishedAt: publishedTime,
-    summary: description,
-    image,
+    summary,
+    ogImage,
   } = post.metadata
-  let ogImage = image
-    ? image
+  let finalOgImage = ogImage
+    ? ogImage
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
-    description,
+    description: summary,
     openGraph: {
       title,
-      description,
+      description: summary,
       type: 'article',
       publishedTime,
       url: `${baseUrl}/essays/${post.slug}`,
       images: [
         {
-          url: ogImage,
+          url: finalOgImage,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
-      description,
-      images: [ogImage],
+      description: summary,
+      images: [finalOgImage],
     },
   }
 }
@@ -67,10 +63,10 @@ export default function Blog({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className="max-w-4xl mx-auto">
+    <section className="max-w-3xl mx-auto px-4 py-8">
       <Link
         href="/essays"
-        className="text-sm underline decoration-1 underline-offset-2 text-black/60 hover:text-black transition-colors mb-8 block"
+        className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors mb-12 block"
       >
         ← Return to all essays
       </Link>
@@ -85,8 +81,8 @@ export default function Blog({ params }: { params: { slug: string } }) {
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
             description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
+            image: post.metadata.ogImage
+              ? post.metadata.ogImage
               : `/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/essays/${post.slug}`,
             author: {
@@ -96,24 +92,33 @@ export default function Blog({ params }: { params: { slug: string } }) {
           }),
         }}
       />
-      <div className="flex flex-col-reverse sm:flex-row justify-between items-start mb-4 space-y-4 sm:space-y-0">
-        <h1 className="title font-bold text-3xl sm:text-4xl tracking-tighter">
+      <header className="mb-12">
+        <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
           {post.metadata.title}
         </h1>
-      </div>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
-        </p>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {post.metadata.readingTime}
-        </p>
-      </div>
-      <article className="prose prose-sm sm:prose-base dark:prose-invert max-w-none">
+        <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400 mb-8">
+          <time dateTime={post.metadata.publishedAt}>
+            {formatDate(post.metadata.publishedAt)}
+          </time>
+          <span>•</span>
+          <span>{post.metadata.readingTime}</span>
+        </div>
+        {post.metadata.image && (
+          <div className="mb-8 relative">
+            <Image
+              src={post.metadata.image}
+              alt={post.metadata.title}
+              width={1280}
+              height={720}
+              className="w-full h-auto rounded-lg shadow-sm"
+              priority
+            />
+          </div>
+        )}
+      </header>
+      <article className="prose prose-lg dark:prose-invert max-w-none">
         <CustomMDX source={post.content} />
       </article>
-      
-      <TldrButton text={post.content} isFloating={true} />
     </section>
   )
 }

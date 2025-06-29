@@ -4,6 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
 import remarkGfm from 'remark-gfm'
+import { WikipediaLink } from 'app/essays/WikipediaLink'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -98,6 +99,7 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
+  WikipediaLink,
 }
 
 export function CustomMDX(props) {

@@ -3,8 +3,6 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
-import { CookieNotice } from 'app/components/CookieNotice'
-import { ThemeProvider } from 'app/components/theme-provider'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -67,14 +65,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
             {children}
             <Analytics />
             <SpeedInsights />
-            <CookieNotice />
           </main>
-        </ThemeProvider>
       </body>
     </html>
   )

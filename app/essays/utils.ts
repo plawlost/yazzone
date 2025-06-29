@@ -6,6 +6,7 @@ export type Metadata = {
   title: string
   publishedAt: string
   summary: string
+  ogImage?: string
   image?: string
   slug?: string
   readingTime: string

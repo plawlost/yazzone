@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getEssays } from './utils'
-import EssayList from '../components/EssayList'
+import { formatDate } from 'app/lib/format'
 
 export default function EssaysPage() {
   const allEssays = getEssays()
@@ -31,8 +31,33 @@ export default function EssaysPage() {
           Subscribe via RSS
         </a>
       </header>
-      <div className="border-t border-black/10">
-        <EssayList essays={allEssays} />
+      <div className="border-t border-black/10 dark:border-white/10">
+        <div className="divide-y divide-black/10 dark:divide-white/10">
+          {allEssays.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/essays/${post.slug}`}
+              className="block py-8 group"
+            >
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start space-y-4 sm:space-y-0">
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold group-hover:underline decoration-2 underline-offset-4 transition-all">
+                    {post.metadata.title}
+                  </h2>
+                  <p className="text-black/80 dark:text-white/80 max-w-xl">
+                    {post.metadata.summary}
+                  </p>
+                </div>
+                <div className="text-sm text-black/60 dark:text-white/60 min-w-[140px] text-left sm:text-right">
+                  <time dateTime={post.metadata.publishedAt}>
+                    {formatDate(post.metadata.publishedAt)}
+                  </time>
+                  <span className="block">{post.metadata.readingTime}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   )

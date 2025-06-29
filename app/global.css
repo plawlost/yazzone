@@ -97,7 +97,7 @@ html.dark {
 }
 
 .prose p {
-  @apply my-4 text-black;
+  @apply my-6 text-black leading-relaxed text-base;
 }
 
 .dark .prose p {
@@ -105,23 +105,67 @@ html.dark {
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-4xl font-bold tracking-tight mt-12 mb-6 text-black;
+}
+
+.dark .prose h1 {
+  @apply text-white;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-2xl font-semibold tracking-tight mt-12 mb-6 text-black;
+}
+
+.dark .prose h2 {
+  @apply text-white;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-semibold tracking-tight mt-8 mb-4 text-black;
+}
+
+.dark .prose h3 {
+  @apply text-white;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply text-lg font-medium tracking-tight mt-6 mb-3 text-black;
+}
+
+.dark .prose h4 {
+  @apply text-white;
 }
 
 .prose strong {
-  @apply font-semibold;
+  @apply font-bold text-black;
+}
+
+.dark .prose strong {
+  @apply text-white;
+}
+
+.prose em {
+  @apply italic text-black;
+}
+
+.dark .prose em {
+  @apply text-white;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-neutral-300 pl-6 my-8 italic text-neutral-700;
+}
+
+.dark .prose blockquote {
+  @apply border-neutral-700 text-neutral-300;
+}
+
+.prose hr {
+  @apply border-neutral-200 my-12;
+}
+
+.dark .prose hr {
+  @apply border-neutral-800;
 }
 
 .prose ul {
