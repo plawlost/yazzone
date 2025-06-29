@@ -3,7 +3,14 @@ import Image from 'next/image'
 import { getEssays, getHomepageData, getBackstoryData } from 'app/essays/utils'
 import { CustomMDX } from 'app/components/mdx';
 import { formatDate } from 'app/lib/format'
+import { TldrButton } from 'app/components/tldr-button'
+import { Intro } from 'app/components/home/Intro'
+import { Backstory } from 'app/components/home/Backstory'
+import { FeaturedEssays } from 'app/components/home/FeaturedEssays'
+import { Projects } from 'app/components/home/Projects'
+import { DynamicInfo } from 'app/components/home/DynamicInfo'
 import { WikipediaLink } from 'app/essays/WikipediaLink'
+import { ThemeToggle } from 'app/components/ThemeToggle'
 
 export default function Page() {
   const allEssays = getEssays()
@@ -37,7 +44,14 @@ export default function Page() {
             <p className="text-lg sm:text-xl pl-0.5 sm:pl-1">Founder. Architect. Outlier.</p>
           </div>
         </div>
+        <ThemeToggle />
       </header>
+
+      <Intro />
+      <DynamicInfo />
+      <Backstory content={backstory} />
+      <FeaturedEssays essays={allEssays} />
+      <Projects projects={projects} />
       
       <section className="space-y-6">
         <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:space-x-6 sm:space-y-0">
@@ -61,7 +75,7 @@ export default function Page() {
           <p className="text-sm text-black/60 dark:text-white/60">When I'm not in meetings or strategizing, I still ship code & design:</p>
           <div className="flex">
             <img
-              src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Dev+Time&layout=compact&cache_seconds=0&langs_count=6"
+              src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Programming+Time&layout=compact&cache_seconds=0&langs_count=6"
               alt="Recent coding activity"
               width={420}
               height={150}
@@ -142,6 +156,8 @@ export default function Page() {
             </div>
         </div>
       </footer>
+      
+      <TldrButton text={homepageText} isFloating={true} />
     </div>
   )
 }

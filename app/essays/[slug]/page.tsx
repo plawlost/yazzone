@@ -5,6 +5,7 @@ import { CustomMDX } from 'app/components/mdx'
 import { getEssays, getEssay, Metadata } from 'app/essays/utils'
 import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
+import { WikipediaLink } from 'app/essays/WikipediaLink'
 
 export async function generateStaticParams() {
   let posts = getEssays()
@@ -117,7 +118,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
         )}
       </header>
       <article className="prose prose-lg dark:prose-invert max-w-none">
-        <CustomMDX source={post.content} />
+        <CustomMDX source={post.content} components={{ WikipediaLink }}/>
       </article>
     </section>
   )

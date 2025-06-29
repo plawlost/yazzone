@@ -99,7 +99,6 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
-  WikipediaLink,
 }
 
 export function CustomMDX(props) {
