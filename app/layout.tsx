@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ['Yaz Caleb', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
+  keywords: ['Yaz Caleb', 'Yagiz Erkam Çelebi', 'Yağız Erkam Çelebi', 'plawlost', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
   viewport: {
     width: 'device-width',
     initialScale: 1,
