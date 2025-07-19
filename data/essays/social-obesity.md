@@ -51,4 +51,4 @@ Your real friends—the ones who make you better instead of bitter—they're out
 
 Stop being social fat. Start being social fit.
 
-The diet starts now.
+That diet begins now.
