@@ -34,13 +34,13 @@ export default function Page() {
         <div className="flex items-center space-x-6">
           <Image
             src="/favicon.ico"
-            alt="Yaz Celebi"
+            alt="Yaz Caleb"
             width={80}
             height={80}
             className="rounded-full"
           />
           <div className="space-y-1">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Yagiz E. Celebi.</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Yaz A. Caleb.</h1>
             <p className="text-lg sm:text-xl pl-0.5 sm:pl-1">Founder. Architect. Outlier.</p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Page() {
           <div className="lg:col-span-1">
             <Image
               src="/yazpic1.jpg"
-              alt="Yagiz E. Celebi"
+              alt="Yaz Caleb"
               width={400}
               height={500}
               className="w-full object-cover"
@@ -99,7 +99,7 @@ export default function Page() {
           <div className="lg:col-span-2 flex flex-col justify-end">
             <Image
               src="/yazpic2.jpg"
-              alt="Yagiz E. Celebi in childhood"
+              alt="Yaz A. Caleb in childhood"
               width={600}
               height={400}
               className="w-full object-cover"

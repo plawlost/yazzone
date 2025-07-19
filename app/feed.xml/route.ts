@@ -6,13 +6,13 @@ export async function GET() {
   const allEssays = getEssays();
 
   const feed = new RSS({
-    title: 'Yagiz E. Celebi | Essays',
+    title: 'Yaz A. Caleb | Essays',
     description: 'All my raw takes about leverage, entropy, and the few things worth betting your life on.',
     site_url: `${baseUrl}/essays`,
     feed_url: `${baseUrl}/feed.xml`,
     language: 'en',
     pubDate: new Date(),
-    copyright: `© ${new Date().getFullYear()} Yagiz E. Celebi`,
+    copyright: `© ${new Date().getFullYear()} Yaz A. Caleb`,
   });
 
   allEssays.forEach((post) => {
@@ -21,7 +21,7 @@ export async function GET() {
       description: post.metadata.summary,
       url: `${baseUrl}/essays/${post.slug}`,
       date: post.metadata.publishedAt,
-      author: 'Yagiz E. Celebi',
+      author: 'Yaz A. Caleb',
     });
   });
 

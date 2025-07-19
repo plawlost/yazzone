@@ -9,15 +9,15 @@ import { ThemeProvider } from 'app/components/theme-provider'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Yaz Celebi',
-    template: '%s | Yaz Celebi',
+    default: 'Yaz Caleb',
+    template: '%s | Yaz Caleb',
   },
   description: 'Founder, Thinker, Nonconformist.',
   openGraph: {
-    title: 'Yaz Celebi',
+    title: 'Yaz Caleb',
     description: 'Founder, Thinker, Nonconformist.',
     url: baseUrl,
-    siteName: 'Yaz Celebi',
+    siteName: 'Yaz Caleb',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/og`,
         width: 1200,
         height: 630,
-        alt: 'Yaz Celebi',
+        alt: 'Yaz Caleb',
       },
     ],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ['Yaz Celebi', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
+  keywords: ['Yaz Caleb', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
   viewport: {
     width: 'device-width',
     initialScale: 1,

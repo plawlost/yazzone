@@ -42,7 +42,7 @@ export async function GET(request: Request) {
               fontWeight: 700,
             }}
           >
-            Yagiz E. Celebi
+            Yaz A. Caleb
           </div>
 
           <div

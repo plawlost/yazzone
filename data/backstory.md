@@ -1,3 +1,5 @@
+• Born **Yağız Erkam Çelebi** in <WikipediaLink keyword="Ankara">Ankara</WikipediaLink>, <WikipediaLink keyword="Türkiye">Turkey</WikipediaLink>.
+
 • **Turkish**, with full paternal <WikipediaLink keyword="Albanians">Albanian</WikipediaLink> origin.
 
 • Self-taught in **English** and **software** — learned from Harvard, MIT, and YC Startup School. Pursuing <WikipediaLink keyword="General Educational Development">GED</WikipediaLink>.
