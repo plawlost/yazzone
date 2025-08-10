@@ -193,7 +193,7 @@ html.dark {
 
 /* Callout styles */
 .callout {
-  @apply my-8 px-5 py-3 sm:py-4 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
+  @apply my-8 px-5 py-2 sm:py-3 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
 }
 .dark .callout {
   @apply border-neutral-800 bg-neutral-900 text-neutral-200;
@@ -201,15 +201,16 @@ html.dark {
 
 /* Reduce vertical rhythm inside callouts */
 .callout p {
-  @apply my-1 sm:my-2;
+  @apply my-1;
 }
 .callout h3 {
   @apply mt-0 mb-3;
 }
 
 /* Tighter spacing controls for titled callouts */
-.callout .callout-title { @apply mt-0 mb-1 sm:mb-2; }
-.callout .callout-sub { @apply mt-0 mb-2 sm:mb-3; }
+.callout .callout-title { @apply mt-0 mb-1; }
+.callout .callout-sub { @apply mt-0 mb-1; }
+.callout .callout-image { @apply mt-0; }
 
 /* Lead image aligned left on larger screens */
 .lead-left {

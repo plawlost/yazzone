@@ -35,7 +35,7 @@ That is *systems thinking in action*. You do not ask what helps this metric toda
 <div class="callout">
   <p class="text-center font-semibold callout-title">Two loops</p>
   <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 callout-sub">Reinforcing (compounding) vs balancing (governor)</p>
-  <p class="text-center m-0">
+  <p class="text-center m-0 callout-image">
     <img src="/images/essays/people-who-dont-see-the-whole/two-loops.png" class="inline-block max-w-[520px] w-full" />
   </p>
 </div>
