@@ -193,23 +193,21 @@ html.dark {
 
 /* Callout styles */
 .callout {
-  @apply my-6 p-4 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
+  @apply my-8 p-4 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
 }
 .dark .callout {
   @apply border-neutral-800 bg-neutral-900 text-neutral-200;
 }
-/* Tighten internal spacing so it doesn't look like a giant empty card */
-.prose .callout p {
-  @apply my-2;
+
+/* Tighten spacing inside callouts */
+.callout p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
-.prose .callout > p:first-child {
-  @apply mt-0;
-}
-.prose .callout > p:last-child {
-  @apply mb-0;
-}
-.prose .callout img {
-  @apply mx-auto max-w-[560px] w-full;
+.callout img {
+  @apply inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 /* Lead image tweaks */
@@ -221,6 +219,24 @@ html.dark {
 }
 .lead-figure em {
   @apply block mt-2 text-sm text-neutral-600 dark:text-neutral-400 not-italic;
+}
+
+/* Float the lead image beside the intro on larger screens */
+.lead-figure--float {
+  @apply my-4;
+}
+@media (min-width: 1024px) {
+  .lead-figure--float {
+    float: left;
+    width: 320px;
+    margin-right: 1.25rem; /* 5 */
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  .lead-figure--float img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Inline visual side-by-side (can be used later) */
