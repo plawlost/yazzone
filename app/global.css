@@ -231,6 +231,10 @@ html.dark {
   @apply block mt-2 text-sm text-neutral-600 dark:text-neutral-400 not-italic;
 }
 
+/* Left-aligned variant for hero visuals */
+.lead-figure-left { @apply text-left; }
+.lead-figure-left img { @apply block ml-0 mr-0; }
+
 /* Inline visual side-by-side (can be used later) */
 .two-col {
   @apply grid grid-cols-1 sm:grid-cols-2 gap-6 items-start my-6;
