@@ -4,7 +4,7 @@ publishedAt: "2025-08-10"
 summary: "See the whole: map your loops, feed the ones that compound, brake the ones that blow up, and work on the lever that moves everything."
 ---
 
-<p class="lead-figure lead-figure--float">
+<p class="lead-figure lead-left">
   <img src="/images/essays/people-who-dont-see-the-whole/cover-flywheel.png" />
 </p>
 
@@ -34,8 +34,10 @@ That is *systems thinking in action*. You do not ask what helps this metric toda
 
 <div class="callout">
   <p class="text-center font-semibold">Two loops</p>
-  <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">Reinforcing (compounding) vs balancing (governor)</p>
-  <p class="text-center"><img src="/images/essays/people-who-dont-see-the-whole/two-loops.png" width="420" /></p>
+  <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 mb-4">Reinforcing (compounding) vs balancing (governor)</p>
+  <p class="text-center m-0">
+    <img src="/images/essays/people-who-dont-see-the-whole/two-loops.png" class="inline-block max-w-[520px] w-full" />
+  </p>
 </div>
 
 <div class="callout">

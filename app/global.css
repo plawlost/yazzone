@@ -193,21 +193,26 @@ html.dark {
 
 /* Callout styles */
 .callout {
-  @apply my-8 p-4 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
+  @apply my-8 p-5 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
 }
 .dark .callout {
   @apply border-neutral-800 bg-neutral-900 text-neutral-200;
 }
 
-/* Tighten spacing inside callouts */
+/* Reduce vertical rhythm inside callouts */
 .callout p {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  @apply my-2;
 }
-.callout img {
-  @apply inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.25rem;
+.callout h3 {
+  @apply mt-0 mb-3;
+}
+
+/* Lead image aligned left on larger screens */
+.lead-left {
+  @apply text-left;
+}
+.lead-left img {
+  @apply sm:float-left sm:mr-6 sm:max-w-[340px];
 }
 
 /* Lead image tweaks */
@@ -219,24 +224,6 @@ html.dark {
 }
 .lead-figure em {
   @apply block mt-2 text-sm text-neutral-600 dark:text-neutral-400 not-italic;
-}
-
-/* Float the lead image beside the intro on larger screens */
-.lead-figure--float {
-  @apply my-4;
-}
-@media (min-width: 1024px) {
-  .lead-figure--float {
-    float: left;
-    width: 320px;
-    margin-right: 1.25rem; /* 5 */
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-  .lead-figure--float img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 /* Inline visual side-by-side (can be used later) */
