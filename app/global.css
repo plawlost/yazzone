@@ -193,10 +193,23 @@ html.dark {
 
 /* Callout styles */
 .callout {
-  @apply my-8 p-5 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
+  @apply my-6 p-4 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
 }
 .dark .callout {
   @apply border-neutral-800 bg-neutral-900 text-neutral-200;
+}
+/* Tighten internal spacing so it doesn't look like a giant empty card */
+.prose .callout p {
+  @apply my-2;
+}
+.prose .callout > p:first-child {
+  @apply mt-0;
+}
+.prose .callout > p:last-child {
+  @apply mb-0;
+}
+.prose .callout img {
+  @apply mx-auto max-w-[560px] w-full;
 }
 
 /* Lead image tweaks */
