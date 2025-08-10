@@ -97,7 +97,7 @@ html.dark {
 }
 
 .prose p {
-  @apply my-6 text-black leading-relaxed text-base;
+  @apply my-5 text-black leading-relaxed text-[1.02rem];
 }
 
 .dark .prose p {
@@ -113,7 +113,7 @@ html.dark {
 }
 
 .prose h2 {
-  @apply text-2xl font-semibold tracking-tight mt-12 mb-6 text-black;
+  @apply text-3xl font-bold tracking-tight mt-12 mb-6 text-black;
 }
 
 .dark .prose h2 {
@@ -121,7 +121,7 @@ html.dark {
 }
 
 .prose h3 {
-  @apply text-xl font-semibold tracking-tight mt-8 mb-4 text-black;
+  @apply text-2xl font-semibold tracking-tight mt-8 mb-4 text-black;
 }
 
 .dark .prose h3 {
@@ -179,6 +179,40 @@ html.dark {
 .prose li::before {
     content: '•';
     @apply absolute left-0 text-lg;
+}
+
+/* Additional spacing around lists */
+.prose ul, .prose ol {
+  @apply my-6;
+}
+
+/* Narrower reading column and improved rhythm */
+.prose {
+  @apply mx-auto max-w-2xl;
+}
+
+/* Callout styles */
+.callout {
+  @apply my-8 p-5 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
+}
+.dark .callout {
+  @apply border-neutral-800 bg-neutral-900 text-neutral-200;
+}
+
+/* Lead image tweaks */
+.lead-figure {
+  @apply my-6 text-center;
+}
+.lead-figure img {
+  @apply inline-block max-w-[480px] w-full;
+}
+.lead-figure em {
+  @apply block mt-2 text-sm text-neutral-600 dark:text-neutral-400 not-italic;
+}
+
+/* Inline visual side-by-side (can be used later) */
+.two-col {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-6 items-start my-6;
 }
 
 .prose ol {

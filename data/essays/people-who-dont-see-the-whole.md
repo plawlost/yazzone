@@ -4,10 +4,9 @@ publishedAt: "2025-08-10"
 summary: "See the whole: map your loops, feed the ones that compound, brake the ones that blow up, and work on the lever that moves everything."
 ---
 
-<p align="center">
-  <img src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-e2f8-620a-9821-9190a2536da7/raw?se=2025-08-10T16%3A47%3A00Z&sp=r&sv=2024-08-04&sr=b&scid=c640bf61-27c1-55d3-8459-5fc9dfe590d4&skoid=b928fb90-500a-412f-a661-1ece57a7c318&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-10T06%3A41%3A36Z&ske=2025-08-11T06%3A41%3A36Z&sks=b&skv=2024-08-04&sig=KCJUHm5e10Q9mP1RdpZy/pVe%2B3BHaKKnLwwT04ElI9E%3D" alt="Treadmill versus flywheel minimal line icon" width="520" />
-  <br /><em>Cover: treadmill vs. flywheel — are you rowing or compounding.</em>
-  <br />
+<p class="lead-figure">
+  <img src="https://sdmntprpolandcentral.oaiusercontent.com/files/00000000-e2f8-620a-9821-9190a2536da7/raw?se=2025-08-10T16%3A47%3A00Z&sp=r&sv=2024-08-04&sr=b&scid=c640bf61-27c1-55d3-8459-5fc9dfe590d4&skoid=b928fb90-500a-412f-a661-1ece57a7c318&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-10T06%3A41%3A36Z&ske=2025-08-11T06%3A41%3A36Z&sks=b&skv=2024-08-04&sig=KCJUHm5e10Q9mP1RdpZy/pVe%2B3BHaKKnLwwT04ElI9E%3D" alt="Treadmill versus flywheel minimal line icon" />
+  <em>Cover: treadmill vs. flywheel — are you rowing or compounding.</em>
 </p>
 
 **Hi again. If you are building anything and think you can skip this, you are already the guy I am talking about. If you are not, I am going to make sure you never become him. I’ve learnt these in a couple mos:**
@@ -16,9 +15,9 @@ summary: "See the whole: map your loops, feed the ones that compound, brake the 
 
 > Here is a concrete story. In 2001, Amazon was not inevitable. Margins were thin, the dot-com crash had just hit, and the company looked fragile. Jeff Bezos and a small group drew a simple diagram that later got called the flywheel. Lower prices lead to more customers. More customers attract more third-party sellers. More sellers increase selection. Better selection improves customer experience. Better experience drives more traffic. More traffic grows volume, which lowers unit costs, which lets you lower prices again. That was it. A few boxes, a few arrows, and a promise that if you push anywhere on that circle, the whole thing spins faster.
 
-<p align="center">
+<p class="lead-figure">
   <img src="https://feedvisor.com/wp-content/uploads/2020/01/Amazon-flywheel.jpg" alt="Amazon flywheel diagram" width="620" />
-  <br /><em>Amazon’s flywheel: push any node, the whole system spins faster.</em>
+  <em>Amazon’s flywheel: push any node, the whole system spins faster.</em>
 </p>
 
 Most retail executives at the time optimized locally. Negotiate a better supplier discount this quarter. Cut support headcount. Raise shipping fees. Every move had a clear short-term metric and a hidden long-term cost. Amazon did the opposite. They launched Marketplace even though it would compete with their own retail margins, because more sellers thickened the selection node. They launched Prime even though it looked crazy to pre-commit to fast shipping, because reducing friction strengthened the experience node and raised repeat purchase frequency, which increased throughput, which reduced per-unit shipping costs, which justified Prime in the first place. They invested in infrastructure that made every loop tighter. The diagram was not a slogan. It was a map for every decision.
@@ -27,29 +26,33 @@ That is *systems thinking in action*. You do not ask what helps this metric toda
 
 > A second anecdote, shorter but just as useful. Taiichi Ohno from Toyota put an andon cord on the assembly line. Any worker could stop the line if they saw a defect. Western managers visiting were horrified. Stopping the line kills throughput. Ohno knew the opposite was true. If you let defects flow, you pay the tax forever. If you stop and fix the cause, you reduce variation at the source, which raises quality, which reduces rework, which shortens cycle time, which raises morale, which increases suggestions, which reduces future defects again. It looks slower in the moment and faster over the year. The cord was a physical commitment to attack causes, not symptoms.
 
-<p align="center">
+<p class="lead-figure">
   <img src="https://psychsafety.com/wp-content/uploads/2022/09/Screenshot-2022-09-30-at-12.23.09.png" alt="Factory worker pulling andon cord on assembly line" width="620" />
-  <br /><em>Andon: stop the line, fix the cause, speed up the year.</em>
+  <em>Andon: stop the line, fix the cause, speed up the year.</em>
 </p>
+
+> **Systems thinking beats symptom-chasing.** Name the loops, make them visible, strengthen reinforcing loops, and add balancing loops that prevent blowups.
 
 **Both stories share the same pattern.** Name the loops. **Make them visible.** Take actions that strengthen reinforcing loops and remove friction. **Add balancing loops** that prevent blowups. Keep going even when a dashboard says you are down this week.
 
-<p align="center">
-  <img src="https://sdmntprukwest.oaiusercontent.com/files/00000000-4468-6243-8fbc-efb1483fc316/raw?se=2025-08-10T15%3A54%3A21Z&sp=r&sv=2024-08-04&sr=b&scid=afaf8029-c00e-55f4-b56f-2f0d47b4a31b&skoid=b928fb90-500a-412f-a661-1ece57a7c318&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-10T15%3A05%3A31Z&ske=2025-08-11T15%3A05%3A31Z&sks=b&skv=2024-08-04&sig=OWFzhlm7%2BCoCqvs5GwxrDKqIG2ADqpo25s63gDZXSlM%3D" alt="Two simple loops: compounding growth vs governor" width="520" />
-  <br /><em>Two loops: reinforcing (compounding) vs balancing (governor).</em>
-</p>
+<div class="callout">
+  <p class="text-center font-semibold">Two loops</p>
+  <p class="text-center text-sm text-neutral-600 dark:text-neutral-400">Reinforcing (compounding) vs balancing (governor)</p>
+  <p class="text-center">
+    <img src="https://sdmntprukwest.oaiusercontent.com/files/00000000-4468-6243-8fbc-efb1483fc316/raw?se=2025-08-10T15%3A54%3A21Z&sp=r&sv=2024-08-04&sr=b&scid=afaf8029-c00e-55f4-b56f-2f0d47b4a31b&skoid=b928fb90-500a-412f-a661-1ece57a7c318&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-10T15%3A05%3A31Z&ske=2025-08-11T15%3A05%3A31Z&sks=b&skv=2024-08-04&sig=OWFzhlm7%2BCoCqvs5GwxrDKqIG2ADqpo25s63gDZXSlM%3D" alt="Two simple loops: compounding growth vs governor" width="420" />
+  </p>
+</div>
 
-**How do you copy this without pretending to be Bezos or Ohno though. Start small and literal.**
-
-1. Draw your system in five boxes: **users**, **product**, **distribution**, **cost structure**, **trust**. Add arrows. If an arrow ends in hand-waving, you do not understand it yet. Rewrite until each arrow is a specific mechanism, not a hope. Perhaps, “Great UX” is not a mechanism. “Onboarding reduces time to first value from 12 minutes to 90 seconds” is.
-
-2. Find the reinforcing loop. It might be content that brings users who create more content. It might be data that improves the model that makes a better product that earns more usage that produces more data. Label it. Ask what single move increases its gain the most. **Ship that thing first.**
-
-3. Hunt the hidden balancing loop. These are the brakes you did not notice. Support load climbs with users and kills the roadmap. On the other hand, latency rises with traffic and kills retention. Sales promises outrun delivery and kill trust. Name the brake and install a governor before you floor the gas.
-
-4. Make a rule that favors causes over symptoms. For every recurring bug or churn reason, spend at least one day or two on root cause analysis before adding a bandaid. Write down the cause chain. If you cannot reach a cause you control, your roadmap is full of noise.
-
-5. Replace goals with constraints where it matters. A good constraint is “no broken builds reach 3 percent of users” or “time to first value stays under 60 seconds at p95.” Constraints force systems work. Vanity goals let you cheat.
+<div class="callout">
+  <h3>How to copy this (start small)</h3>
+  <ol>
+    <li>Draw five boxes: <strong>users</strong>, <strong>product</strong>, <strong>distribution</strong>, <strong>cost structure</strong>, <strong>trust</strong>. Add arrows. Rewrite until every arrow is a mechanism, not a hope.</li>
+    <li>Find the reinforcing loop. Label it. Ship the single move that increases its gain most. <strong>Ship that first.</strong></li>
+    <li>Hunt the balancing loop (the hidden brake). Name it and install a governor before you floor the gas.</li>
+    <li>Favor causes over symptoms. For recurring issues, spend a day on root-cause analysis and write the chain down.</li>
+    <li>Replace vanity goals with constraints (e.g., p95 TTFV < 60s). Constraints force systems work.</li>
+  </ol>
+</div>
 
 You can tell whether a team sees the whole by how they talk. Symptom thinkers talk in tasks and moments. “Ship dark mode.” “Cut CAC.” “Add an LLM wrapper.” System thinkers talk in mechanisms and loops. “Reduce time to habit formation.” “Increase network density among creators in week one.” “Shorten the model improvement loop from 30 days to 7.” It’s literally the same energy, different altitude.
 

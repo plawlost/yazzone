@@ -58,6 +58,11 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
 export default function Blog({ params }: { params: { slug: string } }) {
   let post = getEssay(params.slug)
+  const allEssays = getEssays()
+  const readNext = allEssays
+    .filter((e) => e.slug !== params.slug)
+    .sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime())
+    .slice(0, 2)
 
   if (!post) {
     notFound()
@@ -93,11 +98,11 @@ export default function Blog({ params }: { params: { slug: string } }) {
           }),
         }}
       />
-      <header className="mb-12">
+      <header className="mb-8">
         <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
           {post.metadata.title}
         </h1>
-        <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400 mb-8">
+        <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-4">
           <time dateTime={post.metadata.publishedAt}>
             {formatDate(post.metadata.publishedAt)}
           </time>
@@ -117,9 +122,33 @@ export default function Blog({ params }: { params: { slug: string } }) {
           </div>
         )}
       </header>
-      <article className="prose prose-lg dark:prose-invert max-w-none">
+      <article className="prose prose-lg dark:prose-invert">
         <CustomMDX source={post.content} components={{ WikipediaLink }}/>
       </article>
+
+      <footer className="mt-16 border-t border-black/10 dark:border-white/10 pt-8">
+        <div className="grid sm:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">Read next</h3>
+            <ul className="space-y-2">
+              {readNext.map((e) => (
+                <li key={e.slug}>
+                  <Link href={`/essays/${e.slug}`} className="underline decoration-1 underline-offset-2">
+                    {e.metadata.title}
+                  </Link>
+                  <span className="ml-2 text-xs text-neutral-500 dark:text-neutral-400">{formatDate(e.metadata.publishedAt)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">About the author</h3>
+            <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+              Yaz builds products and writes about leverage, entropy, and systems that compound. Follow along for more essays and experiments.
+            </p>
+          </div>
+        </div>
+      </footer>
     </section>
   )
 }
