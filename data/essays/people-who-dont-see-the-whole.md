@@ -4,7 +4,7 @@ publishedAt: "2025-08-10"
 summary: "See the whole: map your loops, feed the ones that compound, brake the ones that blow up, and work on the lever that moves everything."
 ---
 
-<p class="lead-figure lead-left">
+<p class="lead-figure">
   <img src="/images/essays/people-who-dont-see-the-whole/cover-flywheel.png" />
 </p>
 

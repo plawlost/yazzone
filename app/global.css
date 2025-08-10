@@ -212,7 +212,7 @@ html.dark {
   @apply text-left;
 }
 .lead-left img {
-  @apply sm:float-left sm:mr-6 sm:max-w-[340px];
+  @apply sm:float-none sm:mr-0 sm:max-w-[520px];
 }
 
 /* Lead image tweaks */
