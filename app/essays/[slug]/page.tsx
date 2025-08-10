@@ -144,7 +144,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">About the author</h3>
             <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              Yaz builds products and writes about leverage, entropy, and systems that compound. Follow along for more essays and experiments.
+              Yaz builds what Silicon Valley forgot. He is a 16-year-old founder of Plaw Inc, shipping agent-native tools like VulnZap and writing sharp, contrarian essays.
             </p>
           </div>
         </div>
