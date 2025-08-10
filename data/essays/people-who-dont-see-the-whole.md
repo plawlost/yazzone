@@ -33,8 +33,8 @@ That is *systems thinking in action*. You do not ask what helps this metric toda
 **Both stories share the same pattern.** Name the loops. **Make them visible.** Take actions that strengthen reinforcing loops and remove friction. **Add balancing loops** that prevent blowups. Keep going even when a dashboard says you are down this week.
 
 <div class="callout">
-  <p class="text-center font-semibold mb-1">Two loops</p>
-  <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 mb-3">Reinforcing (compounding) vs balancing (governor)</p>
+  <p class="text-center font-semibold callout-title">Two loops</p>
+  <p class="text-center text-sm text-neutral-600 dark:text-neutral-400 callout-sub">Reinforcing (compounding) vs balancing (governor)</p>
   <p class="text-center m-0">
     <img src="/images/essays/people-who-dont-see-the-whole/two-loops.png" class="inline-block max-w-[520px] w-full" />
   </p>
