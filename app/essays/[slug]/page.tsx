@@ -6,6 +6,7 @@ import { getEssays, getEssay, Metadata } from 'app/essays/utils'
 import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
 import { WikipediaLink } from 'app/essays/WikipediaLink'
+import { ThemeToggle } from 'app/components/ThemeToggle'
 
 export async function generateStaticParams() {
   let posts = getEssays()
@@ -69,13 +70,19 @@ export default function Blog({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className="max-w-3xl mx-auto px-4 py-8">
-      <Link
-        href="/essays"
-        className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors mb-12 block"
-      >
-        ← Return to all essays
-      </Link>
+    <section className="mx-auto px-4 py-8 max-w-3xl">
+      <div className="flex items-center justify-between mb-6">
+        <Link
+          href="/essays"
+          className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
+        >
+          ← Return to all essays
+        </Link>
+        <div className="shrink-0">
+          {/* Theme toggle on essay pages */}
+          <ThemeToggle />
+        </div>
+      </div>
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -98,7 +105,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
           }),
         }}
       />
-      <header className="mb-8">
+      <header className="mb-8 text-left">
         <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
           {post.metadata.title}
         </h1>

@@ -188,7 +188,7 @@ html.dark {
 
 /* Narrower reading column and improved rhythm */
 .prose {
-  @apply mx-auto max-w-[65ch] font-serif;
+  @apply max-w-[65ch] font-serif text-left;
 }
 
 /* Lead paragraph slightly larger and softer color */
@@ -200,6 +200,9 @@ html.dark {
 .prose h1 { @apply mt-10 mb-4; }
 .prose h2 { @apply mt-10 mb-4; }
 .prose h3 { @apply mt-8 mb-3; }
+
+/* Underline support for inline <u> */
+.prose u { @apply underline decoration-1 underline-offset-2; }
 
 /* Callout styles */
 .callout {
