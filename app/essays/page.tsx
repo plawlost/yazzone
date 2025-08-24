@@ -11,9 +11,6 @@ export default function EssaysPage() {
         return 1
       })
 
-  const featuredEssay = allEssays.find(essay => essay.slug === 'two-steps-one-test') || allEssays.find(essay => essay.metadata.featured)
-  const regularEssays = allEssays.filter(essay => essay.slug !== 'two-steps-one-test' && !essay.metadata.featured)
-
   return (
     <div className="space-y-12 max-w-4xl mx-auto">
       <Link
@@ -35,39 +32,9 @@ export default function EssaysPage() {
         </a>
       </header>
 
-      {featuredEssay && (
-        <section className="space-y-6">
-          <div className="text-sm text-black/60 dark:text-white/60 uppercase tracking-wider">
-            Featured Essay
-          </div>
-          <Link
-            href={`/essays/${featuredEssay.slug}`}
-            className="block group"
-          >
-            <div className="p-8 bg-black/5 dark:bg-white/5 rounded-xl border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start space-y-4 sm:space-y-0">
-                <div className="space-y-3">
-                  <h2 className="text-3xl font-bold group-hover:underline decoration-2 underline-offset-4 transition-all">
-                    {featuredEssay.metadata.title}
-                  </h2>
-                  <p className="text-black/80 dark:text-white/80 max-w-2xl text-lg leading-relaxed">
-                    {featuredEssay.metadata.summary}
-                  </p>
-                </div>
-                <div className="text-sm text-black/60 dark:text-white/60 min-w-[140px] text-left sm:text-right">
-                  <time dateTime={featuredEssay.metadata.publishedAt}>
-                    {formatDate(featuredEssay.metadata.publishedAt)}
-                  </time>
-                  <span className="block">{featuredEssay.metadata.readingTime}</span>
-                </div>
-              </div>
-            </div>
-          </Link>
-        </section>
-      )}
       <div className="border-t border-black/10 dark:border-white/10">
         <div className="divide-y divide-black/10 dark:divide-white/10">
-          {regularEssays.map((post) => (
+          {allEssays.map((post) => (
             <Link
               key={post.slug}
               href={`/essays/${post.slug}`}
