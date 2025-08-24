@@ -1,12 +1,12 @@
 ---
 title: "Two steps, one test"
-publishedAt: "2025-01-15"
+publishedAt: "2025-08-24"
 summary: "People stall because they mix two kinds of thinking that dislike each other. There is choosing what to do. Then there is doing it. Separate them, and motion produces information that thinking alone cannot."
 featured: true
+image: "https://i.ibb.co/B2G65qZh/Chat-GPT-Image-Aug-24-2025-05-33-29-PM.png"
+imageAlt: "Two steps, one test — cover image"
+ogImage: "https://i.ibb.co/B2G65qZh/Chat-GPT-Image-Aug-24-2025-05-33-29-PM.png"
 ---
-
-## Two steps, one test
-
 People stall because they mix two kinds of thinking that dislike each other. There is choosing what to do. Then there is doing it. If you try to do both at once, you keep pausing the movie to adjust the projector. The picture never sharpens, and the story never advances. If you separate them, even imperfect plans produce motion, and motion produces information that thinking alone cannot.
 
 The phrase "let it all work out" is often misread as relax and hope. It is the opposite for me. It is a strict loop. Decide two steps ahead. Set a clear test. Then stop second guessing until the checkpoint. Reality grades faster than anxiety. You are not turning your brain off. You are isolating new ideas until they are useful. You still think, just at the right time.
