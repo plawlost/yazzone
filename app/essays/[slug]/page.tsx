@@ -70,8 +70,8 @@ export default function Blog({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className="mx-auto px-4 py-8 max-w-3xl">
-      <div className="flex items-center justify-between mb-6">
+    <section className="px-4 py-8">
+      <div className="mx-auto max-w-4xl flex items-center justify-between mb-6">
         <Link
           href="/essays"
           className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
@@ -105,7 +105,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
           }),
         }}
       />
-      <header className="mb-8 text-left">
+      <header className="mx-auto max-w-4xl mb-8 text-left">
         <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
           {post.metadata.title}
         </h1>
@@ -133,7 +133,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
         <CustomMDX source={post.content} components={{ WikipediaLink }}/>
       </article>
 
-      <footer className="mt-16 border-t border-black/10 dark:border-white/10 pt-8">
+      <footer className="mx-auto max-w-4xl mt-16 border-t border-black/10 dark:border-white/10 pt-8">
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">Read next</h3>

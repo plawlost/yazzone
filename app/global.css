@@ -188,7 +188,7 @@ html.dark {
 
 /* Narrower reading column and improved rhythm */
 .prose {
-  @apply max-w-[65ch] font-serif text-left;
+  @apply max-w-[65ch] font-serif text-left mx-auto;
 }
 
 /* Lead paragraph slightly larger and softer color */
