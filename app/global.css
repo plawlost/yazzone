@@ -97,7 +97,7 @@ html.dark {
 }
 
 .prose p {
-  @apply my-5 text-black leading-relaxed text-[1.02rem];
+  @apply my-6 text-black leading-[1.85] text-[1.125rem] font-normal;
 }
 
 .dark .prose p {
@@ -188,8 +188,18 @@ html.dark {
 
 /* Narrower reading column and improved rhythm */
 .prose {
-  @apply mx-auto max-w-2xl;
+  @apply mx-auto max-w-[65ch] font-serif;
 }
+
+/* Lead paragraph slightly larger and softer color */
+.prose p:first-of-type {
+  @apply text-[1.25rem] leading-[1.9] text-neutral-900 dark:text-neutral-100;
+}
+
+/* Tighter heading spacing for better rhythm */
+.prose h1 { @apply mt-10 mb-4; }
+.prose h2 { @apply mt-10 mb-4; }
+.prose h3 { @apply mt-8 mb-3; }
 
 /* Callout styles */
 .callout {
