@@ -31,7 +31,6 @@ Now:
 - Raising pre-seed for VulnZap. Coming out of stealth.
 - PlawLabs Ltd → Plaw Inc. Relocating to Bay Area.
 - Hiring a few founding ML/AI/cybersecurity engineers + designer.
-- I ship fast and orchestrate domain experts across the full stack.
 `
 
 export default function Page() {

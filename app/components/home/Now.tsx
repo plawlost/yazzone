@@ -28,14 +28,13 @@ export function Now() {
           <p className="text-zinc-800 dark:text-zinc-200">Hiring a few founding ML/AI/cybersecurity engineers + designer.</p>
         </div>
       </div>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">When I'm not in necessary meetings, still architect hands-on:</p>
-        <div className="flex">
-          <img
-            src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Programming+Time&layout=compact&cache_seconds=0&langs_count=6"
-            alt="Recent coding activity"
-            className="opacity-90 w-full sm:w-96 lg:w-[500px]"
-          />
-        </div>
+      <p className="text-sm text-zinc-500 dark:text-zinc-400">When I'm not in necessary meetings, still architect hands-on:</p>
+      <div className="flex">
+        <img
+          src="https://github-readme-stats.hackclub.dev/api/wakatime?username=3560&api_domain=hackatime.hackclub.com&theme=swift&custom_title=Recent+Programming+Time&layout=compact&cache_seconds=0&langs_count=6"
+          alt="Recent coding activity"
+          className="opacity-90 w-full sm:w-96 lg:w-[500px]"
+        />
       </div>
     </section>
   )
