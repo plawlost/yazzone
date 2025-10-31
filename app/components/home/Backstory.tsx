@@ -1,11 +1,7 @@
 import { CustomMDX } from 'app/components/mdx'
 import { WikipediaLink } from 'app/components/WikipediaLink'
 
-export function Backstory({
-  content,
-}: {
-  content: { content: string; data: { [key: string]: any } }
-}) {
+export function Backstory({ content }: { content: { content: string; data: { [key: string]: any } } }) {
   return (
     <section className="space-y-6">
       <details className="group">
@@ -30,7 +26,7 @@ export function Backstory({
           </div>
         </summary>
         <div className="mt-4 prose prose-sm max-w-none backstory-prose">
-          <CustomMDX source={content} components={{ WikipediaLink }} />
+          <CustomMDX source={content.content} components={{ WikipediaLink }} />
         </div>
       </details>
     </section>

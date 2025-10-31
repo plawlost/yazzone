@@ -81,6 +81,10 @@ export function getHomepageData() {
 
 export function getBackstoryData() {
   const filePath = path.join(process.cwd(), 'data', 'backstory.md');
-  const { content } = readMDXFile(filePath);
-  return content.replace(/—/g, ' - ');
+  const fileContents = fs.readFileSync(filePath, 'utf-8');
+  const { data, content } = matter(fileContents);
+  return {
+    data,
+    content: content.replace(/—/g, ' - '),
+  };
 }
