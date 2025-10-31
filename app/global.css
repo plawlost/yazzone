@@ -41,7 +41,7 @@ html.dark {
 }
 
 a {
-  @apply text-blue-700 dark:text-blue-500;
+  @apply text-purple-700 dark:text-purple-400;
 }
 
 a:hover {
