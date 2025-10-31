@@ -21,7 +21,7 @@ Today I'm mostly building agent-native security and developer infrastructure. Th
 
 History:
 - Cofounder and CEO, VulnZap (Plaw, Inc.): Built-in security for coding agents/IDEs.
-- Creative Copywriter, Cluely, Inc.: A short-term role where I helped refine tone and campaigns, learning a ton about brand and clarity.
+- Creative Copywriter, Cluely, Inc.: A contract role where I helped refine tone and campaigns, learning a ton about brand and clarity.
 - Product Engineer, ThirdLayer, Inc. (YC W25): Worked on Dex, an AI copilot for browsing. A great temporary role, though the time difference was a killer.
 - Cofounder, HyperCover: An attempt at "Tinder for job apps." Failed fast. Wrong timing, right intuition.
 - Founder, Various Experiments: CYDE and other experiments in Edtech, AI, and agency work. All were lessons that led to one realization: it was time to build something that mattered.

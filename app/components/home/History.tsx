@@ -35,7 +35,7 @@ export function History() {
                 Cluely, Inc.
               </a>
             </p>
-            <p className="text-zinc-500 dark:text-zinc-400">A short-term role where I helped refine tone and campaigns, learning a ton about brand and clarity.</p>
+            <p className="text-zinc-500 dark:text-zinc-400">A contract role where I helped refine tone and campaigns, learning a ton about brand and clarity.</p>
           </div>
         </div>
         <div className="flex items-start space-x-3">
