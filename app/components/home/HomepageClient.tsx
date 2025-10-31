@@ -14,8 +14,10 @@ export function HomepageClient({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <div className="md:col-span-2 space-y-12 md:space-y-16" ref={contentRef}>
-      {children}
+    <div className="md:col-span-2">
+      <div className="space-y-12 md:space-y-16" ref={contentRef}>
+        {children}
+      </div>
       <TldrButton text={homepageText} isFloating={true} />
     </div>
   )
