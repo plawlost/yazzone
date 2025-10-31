@@ -7,7 +7,32 @@ import { Backstory } from './components/home/Backstory'
 import { FeaturedEssays } from './components/home/FeaturedEssays'
 import { History } from './components/home/History'
 import { Now } from './components/home/Now'
-import { HomepageClient } from './components/home/HomepageClient'
+import { TldrButton } from 'app/components/tldr-button'
+
+const homepageText = `
+Intro:
+Building the tools that make AI actually useful. Remotely HQ'd in London. Left school at 16 because the future doesn't wait for permission. Now I design agentic infrastructure that works the way humans think, write what everyone else is too careful to say, and build like the internet's still a frontier. The best time to start was yesterday. The second best is now.
+
+Backstory:
+I was born Yağız Erkam Çelebi. Grew up in Ankara, half-Albanian, self-taught English and Computer Science, and finished high school 3 years early to be able to pursue building full-time. Most of what I know came from open courses and documentation: Harvard CS, MIT lectures, YC Startup School, and a lot of debugging at 3 a.m. I like systems work, product architecture, and writing clearly about what I'm building.
+At 14 I built Clade AI — a hardware-native assistant that ran off-device. We shipped prototypes, learned the hard problems of voice, latency, and inference at the edge, then shut it down when the team collapsed. Around the same time I became one of the first civilian testers of GPT-2 and DALL·E 1, which pulled me deep into generative models and human-machine interfaces.
+That same year I gave a TED-Ed talk on Terms and Conditions. Since then I've kept a steady rhythm of publishing essays that pressure-test ideas in public. I train, read, and ship. I prefer small, composable tools over platforms that try to do everything.
+Today I'm mostly building agent-native security and developer infrastructure. The computer now writes more code than humans can audit, so I'm focused on AI sovereignty, trust, observability, and safe full-autonomy. I live mostly on the road, work remotely across Europe and Asia, and look for high-agency collaborators. If something matters, I build it, measure it, and keep what survives contact with reality.
+
+History:
+- Cofounder and CEO, VulnZap (Plaw, Inc.): Built-in security for coding agents/IDEs.
+- Creative Copywriter, Cluely, Inc.: A short-term role where I helped refine tone and campaigns, learning a ton about brand and clarity.
+- Product Engineer, ThirdLayer, Inc. (YC W25): Worked on Dex, an AI copilot for browsing. A great temporary role, though the time difference was a killer.
+- Cofounder, HyperCover: An attempt at "Tinder for job apps." Failed fast. Wrong timing, right intuition.
+- Founder, Various Experiments: CYDE and other experiments in Edtech, AI, and agency work. All were lessons that led to one realization: it was time to build something that mattered.
+- Founder, Clade AI: My first real startup. A hardware-native AI assistant built at 14. Scaled to a team of 30+ before shutting down.
+
+Now:
+- Raising pre-seed for VulnZap. Coming out of stealth.
+- PlawLabs Ltd → Plaw Inc. Relocating to Bay Area.
+- Hiring a few founding ML/AI/cybersecurity engineers + designer.
+- I ship fast and orchestrate domain experts across the full stack.
+`
 
 export default function Page() {
   const allEssays = getEssays()
@@ -80,7 +105,7 @@ export default function Page() {
         </div>
       </div>
 
-      <HomepageClient>
+      <div className="md:col-span-2 space-y-12 md:space-y-16">
         <Intro />
         <Backstory content={backstory} />
         <FeaturedEssays essays={allEssays} />
@@ -119,7 +144,8 @@ export default function Page() {
             </div>
           </div>
         </section>
-      </HomepageClient>
+        <TldrButton text={homepageText} isFloating={true} />
+      </div>
 
       <div className="md:hidden space-y-4">
         <div>
