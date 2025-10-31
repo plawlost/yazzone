@@ -28,8 +28,6 @@ export function Now() {
           <p className="text-zinc-800 dark:text-zinc-200">Hiring a few founding ML/AI/cybersecurity engineers + designer.</p>
         </div>
       </div>
-      <p className="text-zinc-800 dark:text-zinc-200">I ship fast and orchestrate domain experts across the full stack.</p>
-      <div className="mt-8 space-y-3">
         <p className="text-sm text-zinc-500 dark:text-zinc-400">When I'm not in necessary meetings, still architect hands-on:</p>
         <div className="flex">
           <img
