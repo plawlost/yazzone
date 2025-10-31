@@ -1,5 +1,3 @@
-'use client'
-
 export function Intro() {
   return (
     <section className="space-y-6">
