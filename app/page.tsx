@@ -10,6 +10,25 @@ import { ThemeToggle } from 'app/components/ThemeToggle'
 import { History } from './components/home/History'
 import { Now } from './components/home/Now'
 
+const homepageText = `
+Intro:
+Building the tools that make AI actually useful. Remotely HQ'd in London. Left school at 16 because the future doesn't wait for permission. Now I design agentic infrastructure that works the way humans think, write what everyone else is too careful to say, and build like the internet's still a frontier. The best time to start was yesterday. The second best is now.
+
+History:
+- Cofounder and CEO, VulnZap (Plaw, Inc.): Built-in security for coding agents/IDEs.
+- Creative Copywriter, Cluely, Inc.: A short-term role where I helped refine tone and campaigns, learning a ton about brand and clarity.
+- Product Engineer, ThirdLayer, Inc. (YC W25): Worked on Dex, an AI copilot for browsing. A great temporary role, though the time difference was a killer.
+- Cofounder, HyperCover: An attempt at "Tinder for job apps." Failed fast. Wrong timing, right intuition.
+- Founder, Various Experiments: CYDE and other experiments in Edtech, AI, and agency work. All were lessons that led to one realization: it was time to build something that mattered.
+- Founder, Clade AI: My first real startup. A hardware-native AI assistant built at 14. Scaled to a team of 30+ before shutting down.
+
+Now:
+- Raising pre-seed for VulnZap. Coming out of stealth.
+- PlawLabs Ltd → Plaw Inc. Relocating to Bay Area.
+- Hiring a few founding ML/AI/cybersecurity engineers + designer.
+- I ship fast and orchestrate domain experts across the full stack.
+`
+
 export default function Page() {
   const allEssays = getEssays()
   const { now } = getHomepageData()
@@ -121,7 +140,7 @@ export default function Page() {
           </div>
         </section>
 
-        <TldrButton text={''} isFloating={true} />
+        <TldrButton text={homepageText} isFloating={true} />
       </div>
 
       <div className="md:hidden space-y-4">
