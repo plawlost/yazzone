@@ -2,6 +2,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getEssays, getHomepageData, getBackstoryData } from 'app/essays/utils'
 import { ThemeToggle } from 'app/components/ThemeToggle'
+import { Intro } from './components/home/Intro'
+import { Backstory } from './components/home/Backstory'
+import { FeaturedEssays } from './components/home/FeaturedEssays'
 import { History } from './components/home/History'
 import { Now } from './components/home/Now'
 import { HomepageClient } from './components/home/HomepageClient'
@@ -77,7 +80,46 @@ export default function Page() {
         </div>
       </div>
 
-      <HomepageClient essays={allEssays} backstory={backstory} />
+      <HomepageClient>
+        <Intro />
+        <Backstory content={backstory} />
+        <FeaturedEssays essays={allEssays} />
+        <History />
+        <Now />
+
+        <section className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-1">
+              <Image
+                src="/yazpic1.jpg"
+                alt="Yaz Caleb"
+                width={400}
+                height={500}
+                className="w-full h-auto object-cover rounded-md"
+              />
+            </div>
+            <div className="md:col-span-2 flex flex-col justify-end">
+              <Image
+                src="/yazpic2.jpg"
+                alt="Yaz A. Caleb in childhood"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover rounded-md"
+              />
+              <div className="mt-4 flex items-end justify-between">
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                  Current commit, and the first one.
+                </p>
+                <div className="hidden md:block text-sm text-right text-zinc-500 dark:text-zinc-400">
+                  <p className="text-zinc-800 dark:text-zinc-200">
+                    Still reading? Good instincts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </HomepageClient>
 
       <div className="md:hidden space-y-4">
         <div>
