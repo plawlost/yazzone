@@ -1,25 +1,23 @@
-import Link from 'next/link'
-import { WikipediaLink } from 'app/components/WikipediaLink'
+'use client'
 
 export function Intro() {
   return (
-    <section>
-      <p className="text-xl leading-relaxed max-w-3xl">
-        Hi there, I'm Yaz, 16, building what <WikipediaLink keyword="Silicon Valley">Silicon Valley</WikipediaLink> forgot.
-        <br />
-        Full-time founder at{' '}
-        <a
-          href="https://www.plawlabs.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline decoration-1 underline-offset-2"
-        >
-          PlawLabs
-        </a>{' '}
-        since '22. Nomad, remotely based in London.
-        <br />
-        Dropped out to build agent-native tools, write iconoclastic essays, and live like the internet's still a frontier.
-      </p>
+    <section className="space-y-6">
+      <div className="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+        <p>architect</p>
+        <p>/ˈɑːr.kə.tekt/</p>
+        <p>a person responsible for achieving a particular plan or aim:</p>
+      </div>
+      <div className="space-y-4 text-lg text-zinc-800 dark:text-zinc-200">
+        <p>Building the tools that make AI actually useful.</p>
+        <p>Remotely HQ'd in London.</p>
+        <p>
+          Left school at 16 because the future doesn't wait for permission. Now I design agentic infrastructure that works the way humans think, write what everyone else is too careful to say, and build like the internet's still a frontier.
+        </p>
+        <p>
+          The best time to start was yesterday. The second best is now.
+        </p>
+      </div>
     </section>
   )
 } 

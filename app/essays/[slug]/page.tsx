@@ -7,6 +7,7 @@ import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
 import { WikipediaLink } from 'app/essays/WikipediaLink'
 import { ThemeToggle } from 'app/components/ThemeToggle'
+import { TldrButton } from 'app/components/tldr-button'
 
 export async function generateStaticParams() {
   let posts = getEssays()
@@ -71,7 +72,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <section className="px-4 py-8">
-      <div className="mx-auto max-w-2xl flex items-center justify-between mb-6">
+      <div className="mx-auto max-w-[65ch] flex items-center justify-between mb-6">
         <Link
           href="/essays"
           className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
@@ -105,7 +106,7 @@ export default function Blog({ params }: { params: { slug: string } }) {
           }),
         }}
       />
-      <header className="mx-auto max-w-2xl mb-8 text-left">
+      <header className="mx-auto max-w-[65ch] mb-8 text-left">
         <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
           {post.metadata.title}
         </h1>
@@ -123,17 +124,19 @@ export default function Blog({ params }: { params: { slug: string } }) {
               alt={post.metadata.title}
               width={1280}
               height={720}
-              className="w-full h-auto rounded-lg shadow-sm"
+              className="w-full h-auto rounded-md shadow-sm"
               priority
             />
           </div>
         )}
       </header>
-      <article className="prose prose-lg dark:prose-invert max-w-2xl mx-auto">
+      <article className="prose prose-lg dark:prose-invert">
         <CustomMDX source={post.content} components={{ WikipediaLink }}/>
       </article>
 
-      <footer className="mx-auto max-w-2xl mt-16 border-t border-black/10 dark:border-white/10 pt-8">
+      <TldrButton text={post.content} title={post.metadata.title} isFloating={true} />
+
+      <footer className="mx-auto max-w-[65ch] mt-16 border-t border-black/10 dark:border-white/10 pt-8">
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">Read next</h3>

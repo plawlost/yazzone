@@ -1,5 +1,5 @@
 import './global.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { baseUrl } from './sitemap'
@@ -43,12 +43,30 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  keywords: ['Yaz Caleb', 'Yagiz Erkam Çelebi', 'Yağız Erkam Çelebi', 'plawlost', 'founder', 'thinker', 'nonconformist', 'agent-native', 'AI', 'iconoclastic essays', 'PlawLabs', 'VulnZap', 'LLMStreet', 'Brief'],
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
+  keywords: [
+    'Yaz Caleb',
+    'Yagiz Celebi',
+    'Yagiz E Celebi',
+    'Yaz A. Caleb',
+    'Yağız Erkam Çelebi',
+    'plawlost',
+    'founder',
+    'thinker',
+    'nonconformist',
+    'agent-native',
+    'AI',
+    'iconoclastic essays',
+    'PlawLabs',
+    'VulnZap',
+    'LLMStreet',
+    'Brief',
+  ],
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -64,9 +82,9 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased max-w-6xl mx-auto sm:px-8 mt-12">
+      <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
             {children}
