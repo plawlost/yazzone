@@ -18,9 +18,19 @@ export function TldrButton({
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const [sourceUrl, setSourceUrl] = useState('')
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     setSourceUrl(window.location.href)
+    // Detect mobile device
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase()) || window.innerWidth < 768
+      setIsMobile(isMobileDevice)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   const prompt = title
@@ -30,9 +40,36 @@ export function TldrButton({
 ${text}`
     : `The user was too lazy to read the following text. Summarize it in direct, information-dense bullet points that capture every core argument, data point, and conclusion. Omit all filler and conversational fluff. After the summary, ask if they have any questions remaining such then provide a markdown link to go back to the original source: [Return to original article](${sourceUrl}). Here is the text: ${text}`
   const encodedPrompt = encodeURIComponent(prompt)
-  const chatGptUrl = `https://chatgpt.com/?m=${encodedPrompt}`
-  const claudeUrl = `https://claude.ai/new?q=${encodedPrompt}`
-  const perplexityUrl = `https://www.perplexity.ai/search?q=${encodedPrompt}&focus=writing`
+  
+  // Create URLs - use app deep links on mobile if available, fallback to web
+  const chatGptWebUrl = `https://chatgpt.com/?m=${encodedPrompt}`
+  const chatGptAppUrl = `chatgpt://?m=${encodedPrompt}`
+  
+  const claudeWebUrl = `https://claude.ai/new?q=${encodedPrompt}`
+  const claudeAppUrl = `claude://new?q=${encodedPrompt}`
+  
+  const perplexityWebUrl = `https://www.perplexity.ai/search?q=${encodedPrompt}&focus=writing`
+  const perplexityAppUrl = `perplexity://search?q=${encodedPrompt}&focus=writing`
+
+  // Handle mobile app links with fallback
+  const handleMobileLink = (appUrl: string, webUrl: string, e: React.MouseEvent) => {
+    setIsOpen(false)
+    if (isMobile) {
+      e.preventDefault()
+      // Try app deep link - if app is installed, it will open
+      // Otherwise, fallback to web URL
+      window.location.href = appUrl
+      
+      // Fallback to web after a brief delay if app doesn't open
+      setTimeout(() => {
+        // Only navigate if page is still visible (app didn't open)
+        if (document.visibilityState === 'visible') {
+          window.location.href = webUrl
+        }
+      }, 1500)
+    }
+    // On desktop, let the normal link behavior happen (target="_blank")
+  }
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -68,29 +105,29 @@ ${text}`
         <div className="absolute right-0 bottom-full mb-2 z-10 w-52 sm:w-56 origin-bottom-right rounded-md bg-white dark:bg-black shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 focus:outline-none">
           <div className="py-1">
             <a
-              href={chatGptUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={chatGptWebUrl}
+              target={isMobile ? undefined : "_blank"}
+              rel={isMobile ? undefined : "noopener noreferrer"}
               className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleMobileLink(chatGptAppUrl, chatGptWebUrl, e)}
             >
               ChatGPT
             </a>
             <a
-              href={claudeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={claudeWebUrl}
+              target={isMobile ? undefined : "_blank"}
+              rel={isMobile ? undefined : "noopener noreferrer"}
               className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleMobileLink(claudeAppUrl, claudeWebUrl, e)}
             >
               Claude
             </a>
             <a
-              href={perplexityUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={perplexityWebUrl}
+              target={isMobile ? undefined : "_blank"}
+              rel={isMobile ? undefined : "noopener noreferrer"}
               className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleMobileLink(perplexityAppUrl, perplexityWebUrl, e)}
             >
               Perplexity
             </a>
