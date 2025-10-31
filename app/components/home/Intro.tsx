@@ -14,7 +14,7 @@ export function Intro() {
         <p>
           Left school at 16 because the future doesn't wait for permission. Now I design agentic infrastructure that works the way humans think, write what everyone else is too careful to say, and build like the internet's still a frontier.
         </p>
-        <p>
+        <p className="italic text-zinc-700 dark:text-zinc-300">
           The best time to start was yesterday. The second best is now.
         </p>
       </div>

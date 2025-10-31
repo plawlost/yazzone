@@ -124,12 +124,12 @@ export default function Page() {
         <TldrButton text={''} isFloating={true} />
       </div>
 
-      <div className="md:hidden space-y-8">
-        <div className="space-y-4">
+      <div className="md:hidden space-y-4">
+        <div>
           <p className="text-zinc-800 dark:text-zinc-200">
             Still reading? Good instincts.
           </p>
-          <div className="space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
+          <div className="mt-2 space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
             <a href="mailto:yaz@plawlabs.com" className="block hover:underline">
               yaz@plawlabs.com
             </a>
@@ -138,7 +138,7 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
           <a
             href="https://x.com/plawlost"
             target="_blank"

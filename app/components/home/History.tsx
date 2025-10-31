@@ -59,7 +59,17 @@ export function History() {
         <div className="flex items-start space-x-3">
           <span className="text-zinc-500 dark:text-zinc-400 pt-1">•</span>
           <div>
-            <p className="font-medium">Cofounder, HyperCover</p>
+            <p className="font-medium">
+              Cofounder,{' '}
+              <a
+                href="https://hypercover.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                HyperCover
+              </a>
+            </p>
             <p className="text-zinc-500 dark:text-zinc-400">An attempt at "Tinder for job apps." Failed fast. Wrong timing, right intuition.</p>
           </div>
         </div>
