@@ -1,7 +1,11 @@
 import { CustomMDX } from 'app/components/mdx'
 import { WikipediaLink } from 'app/components/WikipediaLink'
 
-export function Backstory({ content }: { content: string }) {
+export function Backstory({
+  content,
+}: {
+  content: { content: string; data: { [key: string]: any } }
+}) {
   return (
     <section className="space-y-6">
       <details className="group">
