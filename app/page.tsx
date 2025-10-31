@@ -146,45 +146,47 @@ export default function Page() {
         <TldrButton text={homepageText} isFloating={true} />
       </div>
 
-      <div className="md:hidden space-y-4">
-        <div>
-          <p className="text-zinc-800 dark:text-zinc-200">
-            Still reading? Good instincts.
-          </p>
-          <div className="mt-2 space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
-            <a href="mailto:yaz@plawlabs.com" className="block hover:underline">
-              yaz@plawlabs.com
+      <div className="md:hidden">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <div className="flex-1">
+            <p className="text-zinc-800 dark:text-zinc-200">
+              Still reading? Good instincts.
+            </p>
+            <div className="mt-2 space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
+              <a href="mailto:yaz@plawlabs.com" className="block hover:underline">
+                yaz@plawlabs.com
+              </a>
+              <a href="tel:+16283034902" className="block hover:underline">
+                +1 (628) 303-4902
+              </a>
+            </div>
+          </div>
+          <div className="flex-1 space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
+            <a
+              href="https://x.com/plawlost"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:underline"
+            >
+              X <span className="text-xs text-zinc-400 dark:text-zinc-500">(preferred)</span>
             </a>
-            <a href="tel:+16283034902" className="block hover:underline">
-              +1 (628) 303-4902
+            <a
+              href="https://instagram.com/plawlost"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:underline"
+            >
+              Instagram <span className="text-xs text-zinc-400 dark:text-zinc-500">(rare)</span>
+            </a>
+            <a
+              href="https://github.com/plawlost"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:underline"
+            >
+              GitHub <span className="text-xs text-zinc-400 dark:text-zinc-500">(shipping daily)</span>
             </a>
           </div>
-        </div>
-        <div className="space-y-1 text-sm text-zinc-500 dark:text-zinc-400">
-          <a
-            href="https://x.com/plawlost"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:underline"
-          >
-            X <span className="text-xs text-zinc-400 dark:text-zinc-500">(preferred)</span>
-          </a>
-          <a
-            href="https://instagram.com/plawlost"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:underline"
-          >
-            Instagram <span className="text-xs text-zinc-400 dark:text-zinc-500">(rare)</span>
-          </a>
-          <a
-            href="https://github.com/plawlost"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:underline"
-          >
-            GitHub <span className="text-xs text-zinc-400 dark:text-zinc-500">(shipping daily)</span>
-          </a>
         </div>
       </div>
     </div>
