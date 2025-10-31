@@ -20,7 +20,7 @@ export default function EssaysPage() {
         ← Return to homepage
       </Link>
       <header className="space-y-4">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">Essays</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Essays</h1>
         <p className="text-lg sm:text-xl text-black/80 dark:text-white/80 max-w-2xl">
           All my raw takes about leverage, entropy, and the few things worth betting your life on.
         </p>
@@ -42,7 +42,7 @@ export default function EssaysPage() {
             >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start space-y-4 sm:space-y-0">
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold group-hover:underline decoration-2 underline-offset-4 transition-all">
+                  <h2 className="text-2xl font-bold group-hover:underline decoration-1 underline-offset-4 transition-all">
                     {post.metadata.title}
                   </h2>
                   <p className="text-black/80 dark:text-white/80 max-w-xl">

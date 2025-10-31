@@ -29,19 +29,19 @@ export default function Page() {
   `
 
   return (
-    <div className="space-y-16 max-w-4xl">
+    <div className="space-y-24 max-w-4xl">
       <header className="flex flex-col sm:flex-row items-start sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
         <div className="flex items-center space-x-6">
           <Image
             src="/favicon.ico"
             alt="Yaz Caleb"
-            width={80}
-            height={80}
+            width={64}
+            height={64}
             className="rounded-full"
           />
           <div className="space-y-1">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Yaz A. Caleb.</h1>
-            <p className="text-lg sm:text-xl pl-0.5 sm:pl-1">Founder. Architect. Outlier.</p>
+            <p className="text-lg sm:text-xl pl-0.5 sm:pl-1 text-black/70 dark:text-white/70">Founder. Architect. Outlier.</p>
           </div>
         </div>
         <ThemeToggle />
@@ -49,13 +49,16 @@ export default function Page() {
 
       <Intro />
       <DynamicInfo />
-      <Backstory content={backstory} />
-      <FeaturedEssays essays={allEssays} />
-      <Projects projects={projects} />
       
-      <section className="space-y-6">
+      <div className="space-y-16">
+        <Backstory content={backstory} />
+        <FeaturedEssays essays={allEssays} />
+        <Projects projects={projects} />
+      </div>
+
+      <section className="space-y-8">
         <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:space-x-6 sm:space-y-0">
-          <h2 className="text-2xl font-bold bg-orange-50 text-orange-800 dark:bg-orange-900 dark:text-orange-200 px-3 py-2 rounded-lg inline-block w-fit">Now</h2>
+          <h2 className="text-2xl font-bold">Now</h2>
           <div className="flex items-center">
             <Image
               src="/sketch.svg"
@@ -86,51 +89,51 @@ export default function Page() {
       </section>
 
       <section className="space-y-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-end">
           <div className="lg:col-span-1">
             <Image
               src="/yazpic1.jpg"
               alt="Yaz Caleb"
               width={400}
               height={500}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-lg"
             />
           </div>
-          <div className="lg:col-span-2 flex flex-col justify-end">
+          <div className="lg:col-span-2">
             <Image
               src="/yazpic2.jpg"
               alt="Yaz A. Caleb in childhood"
               width={600}
               height={400}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-lg"
             />
-            <div className="mt-4 text-sm text-black/60 dark:text-white/60">
-              <p>Current commit, and the first one.</p>
-            </div>
           </div>
+        </div>
+        <div className="text-center mt-4 text-sm text-black/60 dark:text-white/60">
+          <p>Current commit, and the first one.</p>
         </div>
       </section>
 
-      <footer className="pt-16 pb-8 space-y-6">
-        <p className="text-lg text-black/80 dark:text-white/80">
+      <footer className="pt-16 pb-8 space-y-8 text-center">
+        <p className="text-xl text-black/80 dark:text-white/80">
           Still reading? Maybe you're one of us. Reach out.
         </p>
 
-        <div className="space-y-2">
-          <p className="text-base text-black/80 dark:text-white/80">I reply to every real message within a day.</p>
-          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
-              <a href="mailto:yaz@plawlabs.com" className="underline">yaz@plawlabs.com</a>
-              <a href="tel:+16283034902" className="underline">+1 (628) 303-4902</a>
+        <div className="space-y-3">
+          <p className="text-lg text-black/80 dark:text-white/80">I reply to every real message within a day.</p>
+          <div className="flex flex-col sm:flex-row sm:justify-center sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
+              <a href="mailto:yaz@plawlabs.com" className="underline hover:text-black dark:hover:text-white transition-colors">yaz@plawlabs.com</a>
+              <a href="tel:+16283034902" className="underline hover:text-black dark:hover:text-white transition-colors">+1 (628) 303-4902</a>
           </div>
         </div>
         
-        <div className="border-t border-black/10 dark:border-white/10 pt-6">
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
+        <div className="border-t border-black/10 dark:border-white/10 pt-8 mt-12">
+            <div className="flex justify-center flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0 text-black/60 dark:text-white/60">
               <a
                 href="https://x.com/plawlost"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline hover:text-black dark:hover:text-white transition-colors"
                 aria-label="X (best way to reach me)"
               >
                 X <span className="text-xs text-black/40 dark:text-white/40">(best)</span>
@@ -139,16 +142,16 @@ export default function Page() {
                 href="https://instagram.com/plawlost"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline hover:text-black dark:hover:text-white transition-colors"
                 aria-label="Instagram (rarely active)"
               >
-                Instagram <span className="text-xs text-black/40 dark:text-white/40">(barely active)</span>
+                Instagram <span className="text-xs text-black/40 dark:text-white/40">(rarely active)</span>
               </a>
               <a
                 href="https://github.com/plawlost"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline hover:text-black dark:hover:text-white transition-colors"
                 aria-label="GitHub (barely active)"
               >
                 GitHub <span className="text-xs text-black/40 dark:text-white/40">(kinda new)</span>

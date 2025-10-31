@@ -33,7 +33,7 @@ export function CookieNotice() {
         </p>
         <button
           onClick={handleAccept}
-          className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-md text-sm font-semibold hover:bg-black/80 dark:hover:bg-white/80 transition-colors flex-shrink-0"
+          className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-black/80 dark:hover:bg-white/80 transition-colors flex-shrink-0"
         >
           Got it!
         </button>

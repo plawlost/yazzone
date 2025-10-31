@@ -33,11 +33,11 @@ html.dark {
 
 html {
   min-width: 360px;
-  @apply bg-white text-black;
+  @apply bg-[#f9f9f7] text-black;
 }
 
 html.dark {
-  @apply bg-black text-white;
+  @apply bg-[#1a1a1a] text-white;
 }
 
 .prose .anchor {
@@ -97,15 +97,15 @@ html.dark {
 }
 
 .prose p {
-  @apply my-6 text-black leading-[1.85] text-[1.125rem] font-normal;
+  @apply my-6 text-black/80 dark:text-white/80 leading-[1.85] text-[1.125rem] font-normal;
 }
 
 .dark .prose p {
-  @apply text-white;
+  @apply text-white/80;
 }
 
 .prose h1 {
-  @apply text-4xl font-bold tracking-tight mt-12 mb-6 text-black;
+  @apply text-4xl font-bold tracking-tight mt-12 mb-6 text-black dark:text-white;
 }
 
 .dark .prose h1 {
@@ -113,7 +113,7 @@ html.dark {
 }
 
 .prose h2 {
-  @apply text-3xl font-bold tracking-tight mt-12 mb-6 text-black;
+  @apply text-3xl font-bold tracking-tight mt-12 mb-6 text-black dark:text-white;
 }
 
 .dark .prose h2 {
@@ -121,7 +121,7 @@ html.dark {
 }
 
 .prose h3 {
-  @apply text-2xl font-semibold tracking-tight mt-8 mb-4 text-black;
+  @apply text-2xl font-semibold tracking-tight mt-8 mb-4 text-black dark:text-white;
 }
 
 .dark .prose h3 {
@@ -129,7 +129,7 @@ html.dark {
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-3 text-black;
+  @apply text-lg font-medium tracking-tight mt-6 mb-3 text-black dark:text-white;
 }
 
 .dark .prose h4 {
@@ -137,7 +137,7 @@ html.dark {
 }
 
 .prose strong {
-  @apply font-bold text-black;
+  @apply font-bold text-black dark:text-white;
 }
 
 .dark .prose strong {
@@ -145,7 +145,7 @@ html.dark {
 }
 
 .prose em {
-  @apply italic text-black;
+  @apply italic text-black dark:text-white;
 }
 
 .dark .prose em {
@@ -153,11 +153,11 @@ html.dark {
 }
 
 .prose blockquote {
-  @apply border-l-4 border-neutral-300 pl-6 my-8 italic text-neutral-700;
+  @apply border-l-4 border-neutral-300/80 dark:border-neutral-700/80 pl-6 my-8 italic text-neutral-700/80 dark:text-neutral-300/80;
 }
 
 .dark .prose blockquote {
-  @apply border-neutral-700 text-neutral-300;
+  @apply border-neutral-700/80 text-neutral-300/80;
 }
 
 .prose hr {
@@ -188,7 +188,7 @@ html.dark {
 
 /* Narrower reading column and improved rhythm */
 .prose {
-  @apply max-w-[65ch] font-serif text-left mx-auto;
+  @apply max-w-[82ch] font-serif text-left mx-auto;
 }
 
 /* Lead paragraph slightly larger and softer color */
@@ -197,9 +197,9 @@ html.dark {
 }
 
 /* Tighter heading spacing for better rhythm */
-.prose h1 { @apply mt-10 mb-4; }
-.prose h2 { @apply mt-10 mb-4; }
-.prose h3 { @apply mt-8 mb-3; }
+.prose h1 { @apply mt-16 mb-8; }
+.prose h2 { @apply mt-14 mb-6; }
+.prose h3 { @apply mt-12 mb-4; }
 
 /* Underline support for inline <u> */
 .prose u { @apply underline decoration-1 underline-offset-2; }

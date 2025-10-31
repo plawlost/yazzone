@@ -54,13 +54,13 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 bottom-full mb-2 z-10 w-52 sm:w-56 origin-bottom-right rounded-md bg-white dark:bg-black shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 focus:outline-none">
+        <div className="absolute right-0 bottom-full mb-2 z-10 w-52 sm:w-56 origin-bottom-right rounded-lg bg-white dark:bg-neutral-900 shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 focus:outline-none">
           <div className="py-1">
             <a
               href={chatGptUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               ChatGPT
@@ -69,7 +69,7 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
               href={claudeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Claude
@@ -78,7 +78,7 @@ export function TldrButton({ text, className, isFloating = false }: TldrButtonPr
               href={perplexityUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"
+              className="block w-full text-left px-4 py-3 text-sm text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Perplexity

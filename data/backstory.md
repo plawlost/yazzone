@@ -1,23 +1,7 @@
-• Born **Yağız Erkam Çelebi** in <WikipediaLink keyword="Ankara">Ankara</WikipediaLink>, <WikipediaLink keyword="Türkiye">Turkey</WikipediaLink>.
+I'm Yaz. I grew up in <WikipediaLink keyword="Ankara">Ankara</WikipediaLink>, half-<WikipediaLink keyword="Albanians">Albanian</WikipediaLink>, taught myself English and software, and skipped high school to build full time. Most of what I know came from open courses and documentation: <WikipediaLink keyword="CS50">Harvard CS</WikipediaLink>, <WikipediaLink keyword="MIT_OpenCourseWare">MIT lectures</WikipediaLink>, <WikipediaLink keyword="Y_Combinator">YC Startup School</WikipediaLink>, and a lot of debugging at 3 a.m. I like systems work, product architecture, and writing clearly about what I'm building.
 
-• **Turkish**, with full paternal <WikipediaLink keyword="Albanians">Albanian</WikipediaLink> origin.
+At 14 I built Clade AI — a hardware-native assistant that ran off-device. We shipped prototypes, learned the hard problems of voice, <WikipediaLink keyword="Latency_(engineering)">latency</WikipediaLink>, and <WikipediaLink keyword="Inference">inference</WikipediaLink> at the edge, then shut it down when the team collapsed. Around the same time I became one of the first civilian testers of <WikipediaLink keyword="GPT-2">GPT-2</WikipediaLink> and <WikipediaLink keyword="DALL-E">DALL·E 1</WikipediaLink>, which pulled me deep into <WikipediaLink keyword="Generative_model">generative models</WikipediaLink> and human-machine interfaces.
 
-• Self-taught in **English** and **software** — learned from Harvard, MIT, and YC Startup School. Pursuing <WikipediaLink keyword="General Educational Development">GED</WikipediaLink>.
+That same year I gave a <WikipediaLink keyword="TED_(conference)">TED-Ed talk</WikipediaLink> on <WikipediaLink keyword="Information_privacy">data privacy</WikipediaLink>. Since then I've kept a steady rhythm of publishing essays that pressure-test ideas in public. I train, read, and ship. I prefer small, composable tools over platforms that try to do everything.
 
-• Diagnosed with <WikipediaLink keyword="Attention deficit hyperactivity disorder">ADHD</WikipediaLink>. **6'4**. Plays tennis. Sucks at basketball.
-
-• Passionate about **fitness**, **longevity**, and **self-mastery**.
-
-• Gave a **TED-Ed talk** at 14 on data privacy (**"Terms and Conditions"**).
-
-• Proud son of a **wrongly imprisoned former governor** - named in his <WikipediaLink keyword="European Court of Human Rights">ECHR</WikipediaLink> case.
-
-• Built the world's first **general-purpose AI assistant** (**Clade AI**) at 14 — a hardware-native Alexa alternative. Turned down a **$21M seed offer** from the <WikipediaLink keyword="United Arab Emirates">UAE</WikipediaLink>. Shut down after team collapse.
-
-• One of the first **civilian testers** of <WikipediaLink keyword="GPT-2">GPT-2</WikipediaLink> and <WikipediaLink keyword="DALL-E">DALL·E 1</WikipediaLink>. That's when the obsession with generative AI began.
-
-• Philosophically **post-nationalist**, **contrarian yet conservative**, **pro-America**, and a believer in **tribal merit**.
-
-• Interested in <WikipediaLink keyword="Theology">theology</WikipediaLink>, <WikipediaLink keyword="Sociology">sociology</WikipediaLink>, **anti-populist politics**, and **entrepreneurship** as tools for building better civilizations.
-
-• Believes in **intentionality**: meet to date, date to marry.
+Today I'm the founder of Plaw Inc, building agent-native security and developer infrastructure. The computer now writes more code than humans can audit, so I'm focused on <WikipediaLink keyword="AI_sovereignty">AI sovereignty</WikipediaLink>, trust, <WikipediaLink keyword="Observability">observability</WikipediaLink>, and safe <WikipediaLink keyword="Autonomous_agent">autonomy</WikipediaLink>. I live mostly on the road, work remotely across <WikipediaLink keyword="Europe">Europe</WikipediaLink> and <WikipediaLink keyword="Asia">Asia</WikipediaLink>, and look for high-agency collaborators. If something matters, I build it, measure it, and keep what survives contact with reality.

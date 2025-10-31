@@ -100,15 +100,15 @@ export default function EssayList({ essays }: { essays: Essay[] }) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search essays by title or topic"
-          className="w-full px-4 py-3 text-base border border-gray-200 dark:border-gray-800 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-600 focus:border-gray-400 dark:focus:border-gray-600 bg-white dark:bg-black"
+          className="w-full px-4 py-3 text-base border border-neutral-200 dark:border-neutral-800 rounded-md focus:outline-none focus:ring-1 focus:ring-neutral-400 dark:focus:ring-neutral-600 focus:border-neutral-400 dark:focus:border-neutral-600 bg-transparent"
         />
         
         <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3">
-          <span className="text-sm text-gray-600 dark:text-gray-400">Sort by:</span>
+          <span className="text-sm text-neutral-600 dark:text-neutral-400">Sort by:</span>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="px-3 py-1.5 text-sm border border-gray-200 dark:border-gray-800 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-600 focus:border-gray-400 dark:focus:border-gray-600 bg-white dark:bg-black w-full sm:w-auto"
+            className="px-3 py-1.5 text-sm border border-neutral-200 dark:border-neutral-800 rounded-md focus:outline-none focus:ring-1 focus:ring-neutral-400 dark:focus:ring-neutral-600 focus:border-neutral-400 dark:focus:border-neutral-600 bg-transparent w-full sm:w-auto"
           >
             {sortOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -119,22 +119,22 @@ export default function EssayList({ essays }: { essays: Essay[] }) {
         </div>
       </div>
       
-      <div className="border-t border-gray-200 dark:border-gray-800">
+      <div className="border-t border-neutral-200 dark:border-neutral-800">
         {filteredEssays.length > 0 ? (
           filteredEssays.map((post) => (
-            <article key={post.slug} className="border-b border-gray-200 dark:border-gray-800">
+            <article key={post.slug} className="border-b border-neutral-200 dark:border-neutral-800">
               <Link href={`/essays/${post.slug}`} className="block py-6 sm:py-8">
                 <div className="flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                   <div className="flex-grow space-y-2">
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                    <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
                       {post.metadata.title}
                     </h2>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-sm text-gray-500 dark:text-gray-400 space-y-1 sm:space-y-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-sm text-neutral-500 dark:text-neutral-400 space-y-1 sm:space-y-0">
                       <span>{formatDate(post.metadata.publishedAt)}</span>
                       <span className="hidden sm:inline">•</span>
                       <span>{post.metadata.readingTime}</span>
                     </div>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed pt-1">
+                    <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed pt-1">
                       {truncateContent(post.content, 25)}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ export default function EssayList({ essays }: { essays: Essay[] }) {
           ))
         ) : (
           <div className="text-center py-16">
-            <p className="text-gray-500 dark:text-gray-400">No essays found.</p>
+            <p className="text-neutral-500 dark:text-neutral-400">No essays found.</p>
           </div>
         )}
       </div>
