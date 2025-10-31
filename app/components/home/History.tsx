@@ -18,7 +18,7 @@ export function History() {
               </a>{' '}
               (Plaw, Inc.)
             </p>
-            <p className="text-zinc-500 dark:text-zinc-400">Which brings us to today.</p>
+            <p className="text-zinc-500 dark:text-zinc-400">Built-in security for coding agents/IDEs.</p>
           </div>
         </div>
         <div className="flex items-start space-x-3">
