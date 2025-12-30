@@ -12,6 +12,10 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true,
+    optimizePackageImports: ['geist'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 }
 

@@ -111,7 +111,7 @@ export default function Page() {
         <header className="flex flex-col space-y-4">
           <div className="flex items-center space-x-4">
             <img
-              src="/favicon-64.png"
+              src="/yaz-avatar.webp"
               alt="Yaz Caleb"
               width={64}
               height={64}
