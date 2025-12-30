@@ -2,8 +2,14 @@
 title: "Minimum Viable Parents"
 publishedAt: "2025-12-29"
 summary: "Founder traits and trauma responses are the same machinery."
+image: "/images/essays/mvp/cover.webp"
 featured: true
 ---
+
+<p class="lead-figure">
+  <img src="/images/essays/mvp/cover.webp" alt="Interior, Strandgade 30 by Vilhelm Hammershøi, 1906" />
+  <em>Vilhelm Hammershøi, "Interior, Strandgade 30", 1906</em>
+</p>
 
 I've noticed a pattern among founders I know: a disproportionate number were raised by parents who provided everything except the thing that mattered.
 
