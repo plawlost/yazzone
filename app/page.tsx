@@ -82,7 +82,7 @@ export default function Page() {
             name: 'Yaz Caleb',
             alternateName: ['Yaz A. Caleb', 'Yagiz Erkam Celebi', 'Yagiz Celebi', 'Yagiz Erkam Celebi', 'Yaz Celebi', 'Yagiz Erkam'],
             url: 'https://yaz.zone',
-            image: 'https://yaz.zone/yaz-latest.jpg',
+            image: 'https://yaz.zone/yaz-latest.webp',
             description: 'Left school at 16. Built my first company at 14. Now building what AI needs to run without asking permission.',
             jobTitle: 'Cofounder & CEO',
             worksFor: {
@@ -197,7 +197,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-1 film-grain">
               <img
-                src="/yaz-latest.jpg"
+                src="/yaz-latest.webp"
                 alt="Yaz Caleb"
                 width={1031}
                 height={1834}
@@ -209,7 +209,7 @@ export default function Page() {
             <div className="md:col-span-2 flex flex-col justify-end">
             <div className="film-grain">
               <img
-                src="/yazpic2.jpg"
+                src="/yazpic2.webp"
                 alt="Yaz A. Caleb in childhood"
                 width={600}
                 height={400}
