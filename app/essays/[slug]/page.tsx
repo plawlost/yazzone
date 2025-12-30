@@ -1,13 +1,11 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import { CustomMDX } from 'app/components/mdx'
-import { getEssays, getEssay, Metadata } from 'app/essays/utils'
+import { getEssays, getEssay } from 'app/essays/utils'
 import { formatDate } from 'app/lib/format'
 import { baseUrl } from 'app/sitemap'
 import { WikipediaLink } from 'app/essays/WikipediaLink'
-import { ThemeToggle } from 'app/components/ThemeToggle'
-import { TldrButton } from 'app/components/tldr-button'
+import type { Metadata } from 'next'
 
 export async function generateStaticParams() {
   let posts = getEssays()
@@ -17,11 +15,11 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  let post = getEssays().find((post) => post.slug === params.slug);
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata | undefined {
+  let post = getEssays().find((post) => post.slug === params.slug)
 
   if (!post) {
-    return null
+    return undefined
   }
 
   let {
@@ -32,7 +30,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   } = post.metadata
   let finalOgImage = ogImage
     ? ogImage
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+    : `${baseUrl}/yazzone-og.png`
 
   return {
     title,
@@ -58,6 +56,60 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 }
 
+// Static TL;DR dropdown component - CSS only, no JS
+function TldrDropdown({ title, slug }: { title: string; slug: string }) {
+  const pageUrl = `/essays/${slug}`
+  const prompt = `Read this page and summarize it in crisp bullet points: https://yaz.zone${pageUrl}
+
+Title: "${title}"
+
+Be direct—every bullet should carry weight. Include key arguments, facts, and conclusions. Skip filler. After summarizing, ask if I have questions.`
+
+  const encodedPrompt = encodeURIComponent(prompt)
+
+  return (
+    <details className="tldr-dropdown">
+      <summary>TL;DR</summary>
+      <div className="tldr-menu">
+        <div className="py-1">
+          <a
+            href={`https://chatgpt.com/?m=${encodedPrompt}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tldr-link"
+          >
+            ChatGPT
+            <span className="text-xs text-zinc-400">↗</span>
+          </a>
+          <a
+            href={`https://claude.ai/new?q=${encodedPrompt}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tldr-link"
+          >
+            Claude
+            <span className="text-xs text-zinc-400">↗</span>
+          </a>
+          <a
+            href={`https://www.perplexity.ai/search?q=${encodedPrompt}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tldr-link"
+          >
+            Perplexity
+            <span className="text-xs text-zinc-400">↗</span>
+          </a>
+        </div>
+        <div className="tldr-footer">
+          <p className="text-xs text-zinc-400 dark:text-zinc-500">
+            AI will read &amp; summarize this page
+          </p>
+        </div>
+      </div>
+    </details>
+  )
+}
+
 export default function Blog({ params }: { params: { slug: string } }) {
   let post = getEssay(params.slug)
   const allEssays = getEssays()
@@ -72,17 +124,13 @@ export default function Blog({ params }: { params: { slug: string } }) {
 
   return (
     <section className="px-4 py-8">
-      <div className="mx-auto max-w-[65ch] flex items-center justify-between mb-6">
+      <div className="mx-auto max-w-2xl flex items-center justify-between mb-6">
         <Link
           href="/essays"
           className="text-sm underline decoration-1 underline-offset-2 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors"
         >
           ← Return to all essays
         </Link>
-        <div className="shrink-0">
-          {/* Theme toggle on essay pages */}
-          <ThemeToggle />
-        </div>
       </div>
       <script
         type="application/ld+json"
@@ -97,46 +145,50 @@ export default function Blog({ params }: { params: { slug: string } }) {
             description: post.metadata.summary,
             image: post.metadata.ogImage
               ? post.metadata.ogImage
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+              : `/yazzone-og.png`,
             url: `${baseUrl}/essays/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Yaz Caleb',
+              url: 'https://yaz.zone',
+              sameAs: ['https://x.com/yazcal'],
             },
           }),
         }}
       />
-      <header className="mx-auto max-w-[65ch] mb-8 text-left">
-        <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
-          {post.metadata.title}
-        </h1>
-        <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-4">
-          <time dateTime={post.metadata.publishedAt}>
-            {formatDate(post.metadata.publishedAt)}
-          </time>
-          <span>•</span>
-          <span>{post.metadata.readingTime}</span>
-        </div>
-        {post.metadata.image && (
-          <div className="mb-8 relative">
-            <Image
-              src={post.metadata.image}
-              alt={post.metadata.title}
-              width={1280}
-              height={720}
-              className="w-full h-auto rounded-md shadow-sm"
-              priority
-            />
+      <div className="mx-auto max-w-2xl">
+        <header className="mb-8 text-left">
+          <h1 className="title font-bold text-4xl sm:text-5xl tracking-tight mb-6 text-black dark:text-white">
+            {post.metadata.title}
+          </h1>
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+            <time dateTime={post.metadata.publishedAt}>
+              {formatDate(post.metadata.publishedAt)}
+            </time>
+            <span>•</span>
+            <span>{post.metadata.readingTime}</span>
           </div>
-        )}
-      </header>
-      <article className="prose prose-lg dark:prose-invert">
+          {post.metadata.image && (
+            <div className="mb-8 relative">
+              <img
+                src={post.metadata.image}
+                alt={post.metadata.title}
+                width={1280}
+                height={720}
+                decoding="async"
+                className="w-full h-auto rounded-md shadow-sm"
+              />
+            </div>
+          )}
+        </header>
+        <article className="prose prose-lg dark:prose-invert">
         <CustomMDX source={post.content} components={{ WikipediaLink }}/>
       </article>
 
-      <TldrButton text={post.content} title={post.metadata.title} isFloating={true} />
+      <TldrDropdown title={post.metadata.title} slug={post.slug} />
+      </div>
 
-      <footer className="mx-auto max-w-[65ch] mt-16 border-t border-black/10 dark:border-white/10 pt-8">
+      <footer className="mx-auto max-w-2xl mt-16 border-t border-black/10 dark:border-white/10 pt-8">
         <div className="grid sm:grid-cols-2 gap-6">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">Read next</h3>
@@ -152,9 +204,8 @@ export default function Blog({ params }: { params: { slug: string } }) {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">About the author</h3>
-            <p className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              Yaz builds what Silicon Valley forgot. He is a 16-year-old founder of Plaw Inc, shipping agent-native tools like VulnZap and writing sharp, contrarian essays.
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              — <Link href="/" className="underline decoration-1 underline-offset-2">Yaz</Link>
             </p>
           </div>
         </div>

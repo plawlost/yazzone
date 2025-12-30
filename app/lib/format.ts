@@ -1,4 +1,4 @@
-export function formatDate(dateString: string | Date) {
+export function formatDate(dateString: string | Date, short?: boolean) {
   if (!dateString) {
     return 'Invalid Date';
   }
@@ -7,6 +7,13 @@ export function formatDate(dateString: string | Date) {
   
   if (!date || isNaN(date.getTime())) {
     return 'Invalid Date';
+  }
+
+  if (short) {
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'short',
+    }).format(date);
   }
 
   return new Intl.DateTimeFormat('en-US', {

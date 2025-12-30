@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-::selection {
-  background-color: #000;
-  color: #fff;
-}
+/* ============================================
+   SYSTEM PREFERENCE DARK MODE
+   ============================================ */
 
+/* Light mode defaults */
 :root {
   --sh-class: #000;
   --sh-identifier: #000;
@@ -19,40 +19,133 @@
   --sh-entity: #000;
 }
 
-html.dark {
-  --sh-class: #fff;
-  --sh-identifier: #fff;
-  --sh-sign: #fff;
-  --sh-string: #fff;
-  --sh-keyword: #fff;
-  --sh-comment: #999;
-  --sh-jsxliterals: #fff;
-  --sh-property: #fff;
-  --sh-entity: #fff;
-}
-
 html {
   min-width: 360px;
-  @apply bg-zinc-50 text-zinc-800;
+  scroll-behavior: smooth;
+  @apply bg-white text-zinc-900;
 }
 
-html.dark {
-  @apply bg-zinc-900 text-zinc-200;
+/* Ensure page starts at top on load */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
+/* Dark mode via system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sh-class: #fff;
+    --sh-identifier: #fff;
+    --sh-sign: #fff;
+    --sh-string: #fff;
+    --sh-keyword: #fff;
+    --sh-comment: #999;
+    --sh-jsxliterals: #fff;
+    --sh-property: #fff;
+    --sh-entity: #fff;
+  }
+
+  html {
+    @apply bg-zinc-900 text-zinc-200;
+  }
+
+  ::selection {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .callout {
+    @apply border-neutral-800 bg-neutral-900 text-neutral-200;
+  }
+}
+
+/* Light mode selection */
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ============================================
+   FILM GRAIN EFFECT
+   ============================================ */
+.film-grain {
+  position: relative;
+}
+.film-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
+  border-radius: inherit;
+  mix-blend-mode: overlay;
+}
+
+/* ============================================
+   VIEW TRANSITIONS - fast slideshow effect
+   ============================================ */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: slide-out 0.15s ease-in forwards;
+}
+
+::view-transition-new(root) {
+  animation: slide-in 0.15s ease-out;
+}
+
+@keyframes slide-out {
+  from { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+  to { 
+    opacity: 0; 
+    transform: translateX(-30px); 
+  }
+}
+
+@keyframes slide-in {
+  from { 
+    opacity: 0; 
+    transform: translateX(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+/* ============================================
+   BASE LINK STYLES
+   ============================================ */
 a {
-  @apply text-purple-700 dark:text-purple-400;
+  @apply text-purple-700;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    @apply text-purple-400;
+  }
 }
 
 a:hover {
   @apply underline;
 }
 
+/* ============================================
+   BACKSTORY PROSE
+   ============================================ */
 .backstory-prose p {
   font-size: 0.92rem !important;
   line-height: 1.625rem !important;
 }
 
+/* ============================================
+   PROSE STYLES
+   ============================================ */
 .prose .anchor {
   @apply absolute invisible no-underline;
   margin-left: -1em;
@@ -63,20 +156,13 @@ a:hover {
 }
 
 .prose a {
-  @apply underline decoration-black underline-offset-2 decoration-1;
-}
-
-.dark .prose a {
-  @apply decoration-white;
+  @apply underline underline-offset-2 decoration-1;
+  text-decoration-color: black;
 }
 
 .prose .anchor:after {
   @apply text-black;
   content: '#';
-}
-
-.dark .prose .anchor:after {
-  @apply text-white;
 }
 
 .prose *:hover > .anchor {
@@ -85,10 +171,6 @@ a:hover {
 
 .prose pre {
   @apply bg-neutral-50 overflow-x-auto border border-black py-3 px-4 text-sm;
-}
-
-.dark .prose pre {
-  @apply bg-neutral-900 border-white;
 }
 
 .prose code {
@@ -110,75 +192,46 @@ a:hover {
 }
 
 .prose p {
-  @apply my-6 text-black leading-[1.85] text-[1.125rem] font-normal;
-}
-
-.dark .prose p {
-  @apply text-white;
+  @apply my-6 leading-[1.85] text-[1.125rem] font-normal;
+  color: #18181b; /* zinc-900 */
 }
 
 .prose h1 {
-  @apply text-4xl font-bold tracking-tight mt-12 mb-6 text-black;
-}
-
-.dark .prose h1 {
-  @apply text-white;
+  @apply text-4xl font-bold tracking-tight mt-12 mb-6;
+  color: #18181b;
 }
 
 .prose h2 {
-  @apply text-3xl font-bold tracking-tight mt-12 mb-6 text-black;
-}
-
-.dark .prose h2 {
-  @apply text-white;
+  @apply text-3xl font-bold tracking-tight mt-12 mb-6;
+  color: #18181b;
 }
 
 .prose h3 {
-  @apply text-2xl font-semibold tracking-tight mt-8 mb-4 text-black;
-}
-
-.dark .prose h3 {
-  @apply text-white;
+  @apply text-2xl font-semibold tracking-tight mt-8 mb-4;
+  color: #18181b;
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-3 text-black;
-}
-
-.dark .prose h4 {
-  @apply text-white;
+  @apply text-lg font-medium tracking-tight mt-6 mb-3;
+  color: #18181b;
 }
 
 .prose strong {
-  @apply font-bold text-black;
-}
-
-.dark .prose strong {
-  @apply text-white;
+  @apply font-bold;
+  color: #18181b;
 }
 
 .prose em {
-  @apply italic text-black;
-}
-
-.dark .prose em {
-  @apply text-white;
+  @apply italic;
+  color: #18181b;
 }
 
 .prose blockquote {
   @apply border-l-4 border-neutral-300 pl-6 my-8 italic text-neutral-700;
 }
 
-.dark .prose blockquote {
-  @apply border-neutral-700 text-neutral-300;
-}
-
 .prose hr {
   @apply border-neutral-200 my-12;
-}
-
-.dark .prose hr {
-  @apply border-neutral-800;
 }
 
 .prose ul {
@@ -186,12 +239,13 @@ a:hover {
 }
 
 .prose li {
-    @apply relative pl-6;
+  @apply relative pl-6;
+  color: #18181b;
 }
 
 .prose li::before {
-    content: '•';
-    @apply absolute left-0 text-lg;
+  content: '';
+  @apply absolute left-0 text-lg;
 }
 
 /* Additional spacing around lists */
@@ -201,12 +255,12 @@ a:hover {
 
 /* Narrower reading column and improved rhythm */
 .prose {
-  @apply max-w-[65ch] font-serif text-left mx-auto;
+  @apply max-w-none font-serif text-left;
 }
 
-/* Lead paragraph slightly larger and softer color */
+/* Lead paragraph slightly larger */
 .prose p:first-of-type {
-  @apply text-[1.25rem] leading-[1.9] text-neutral-900 dark:text-neutral-100;
+  @apply text-[1.25rem] leading-[1.9];
 }
 
 /* Tighter heading spacing for better rhythm */
@@ -217,12 +271,47 @@ a:hover {
 /* Underline support for inline <u> */
 .prose u { @apply underline decoration-1 underline-offset-2; }
 
-/* Callout styles */
+/* ============================================
+   PROSE DARK MODE - Must come after light styles
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  .prose p,
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose strong,
+  .prose em,
+  .prose li {
+    color: #fafafa !important; /* zinc-50 */
+  }
+
+  .prose a {
+    text-decoration-color: white;
+  }
+
+  .prose .anchor:after {
+    @apply text-white;
+  }
+
+  .prose pre {
+    @apply bg-neutral-900 border-neutral-700;
+  }
+
+  .prose blockquote {
+    @apply border-neutral-600 text-neutral-300;
+  }
+
+  .prose hr {
+    @apply border-neutral-700;
+  }
+}
+
+/* ============================================
+   CALLOUT STYLES
+   ============================================ */
 .callout {
   @apply my-8 px-5 py-2 sm:py-3 rounded-md border border-neutral-200 bg-neutral-50 text-neutral-800;
-}
-.dark .callout {
-  @apply border-neutral-800 bg-neutral-900 text-neutral-200;
 }
 
 /* Reduce vertical rhythm inside callouts */
@@ -238,7 +327,9 @@ a:hover {
 .callout .callout-sub { @apply mt-0 mb-1; }
 .callout .callout-image { @apply mt-0; }
 
-/* Lead image aligned left on larger screens */
+/* ============================================
+   LEAD IMAGE STYLES
+   ============================================ */
 .lead-left {
   @apply text-left;
 }
@@ -246,7 +337,6 @@ a:hover {
   @apply sm:float-none sm:mr-0 sm:max-w-[520px];
 }
 
-/* Lead image tweaks */
 .lead-figure {
   @apply my-6 text-center;
 }
@@ -254,14 +344,20 @@ a:hover {
   @apply inline-block max-w-[480px] w-full;
 }
 .lead-figure em {
-  @apply block mt-2 text-sm text-neutral-600 dark:text-neutral-400 not-italic;
+  @apply block mt-2 text-sm text-neutral-600 not-italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .lead-figure em {
+    @apply text-neutral-400;
+  }
 }
 
 /* Left-aligned variant for hero visuals */
 .lead-figure-left { @apply text-left; }
 .lead-figure-left img { @apply block ml-0 mr-0; }
 
-/* Inline visual side-by-side (can be used later) */
+/* Inline visual side-by-side */
 .two-col {
   @apply grid grid-cols-1 sm:grid-cols-2 gap-6 items-start my-6;
 }
@@ -275,6 +371,9 @@ a:hover {
   margin-bottom: 1.25em !important;
 }
 
+/* ============================================
+   SCROLLBAR HIDING
+   ============================================ */
 pre::-webkit-scrollbar {
   display: none;
 }
@@ -284,6 +383,17 @@ pre {
   scrollbar-width: none;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   FORM INPUTS
+   ============================================ */
 input[type='text'],
 input[type='email'] {
   -webkit-appearance: none;
@@ -291,6 +401,9 @@ input[type='email'] {
   appearance: none;
 }
 
+/* ============================================
+   TABLE STYLES
+   ============================================ */
 table {
   display: block;
   max-width: fit-content;
@@ -298,6 +411,9 @@ table {
   white-space: nowrap;
 }
 
+/* ============================================
+   MISC UTILITIES
+   ============================================ */
 .title {
   text-wrap: balance;
 }
@@ -314,21 +430,39 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
+/* ============================================
+   BOOK COMPONENT STYLES
+   ============================================ */
+.book-spine-overlay {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 12%, 
+    rgba(255, 255, 255, 0.25) 29.25%, 
+    rgba(255, 255, 255, 0) 50.5%, 
+    rgba(255, 255, 255, 0) 75.25%, 
+    rgba(255, 255, 255, 0.25) 91%, 
+    rgba(255, 255, 255, 0)
+  ), linear-gradient(90deg, 
+    rgba(0, 0, 0, 0.03) 0%,
+    rgba(0, 0, 0, 0.1) 12%, 
+    rgba(0, 0, 0, 0) 30%, 
+    rgba(0, 0, 0, 0.02) 50%, 
+    rgba(0, 0, 0, 0.2) 73.5%, 
+    rgba(0, 0, 0, 0.5) 75.25%, 
+    rgba(0, 0, 0, 0.15) 85.25%, 
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* ============================================
+   CUSTOM CURSOR (desktop with fine pointer only)
+   ============================================ */
 @media (hover: hover) and (pointer: fine) {
-  :root {
-    --cursor-light: url('/cursor-light.svg') 8 8, auto;
-    --cursor-dark: url('/cursor-dark.svg') 8 8, auto;
-  }
-
   html {
-    cursor: var(--cursor-light);
+    cursor: url('/cursor-light.svg') 8 8, auto;
   }
 
-  html.dark {
-    cursor: var(--cursor-dark);
-  }
-
-  a, button, summary, input[type='checkbox'], input[type='radio'], select {
+  a, button, summary, input[type='checkbox'], input[type='radio'], select, label[for] {
     cursor: pointer;
   }
 
@@ -336,4 +470,148 @@ details[open] > summary {
   p, blockquote, li, h1, h2, h3, h4, h5, h6, pre, code {
     cursor: text;
   }
+}
+
+/* Dark mode cursor - combined media query for better compatibility */
+@media (hover: hover) and (pointer: fine) and (prefers-color-scheme: dark) {
+  html {
+    cursor: url('/cursor-dark.svg') 8 8, auto;
+  }
+}
+
+/* ============================================
+   LIBRARY TABS - CSS-ONLY STATE MANAGEMENT
+   ============================================ */
+.library-tab-input {
+  @apply sr-only;
+}
+
+.library-tab-label {
+  @apply cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .library-tab-label {
+    @apply text-zinc-500 hover:text-zinc-300;
+  }
+}
+
+.library-tab-label-active {
+  @apply text-zinc-900 underline underline-offset-4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .library-tab-label-active {
+    @apply text-zinc-100;
+  }
+}
+
+.library-tab-content {
+  @apply hidden;
+}
+
+.library-tab-content-active {
+  @apply block;
+}
+
+/* Radio-based tab switching - active tab label styling */
+#lib-tab-strategy:checked ~ .library-tabs label[for="lib-tab-strategy"],
+#lib-tab-philosophy:checked ~ .library-tabs label[for="lib-tab-philosophy"],
+#lib-tab-systems:checked ~ .library-tabs label[for="lib-tab-systems"],
+#lib-tab-society:checked ~ .library-tabs label[for="lib-tab-society"],
+#lib-tab-fiction:checked ~ .library-tabs label[for="lib-tab-fiction"] {
+  @apply text-zinc-900 underline underline-offset-4;
+}
+
+@media (prefers-color-scheme: dark) {
+  #lib-tab-strategy:checked ~ .library-tabs label[for="lib-tab-strategy"],
+  #lib-tab-philosophy:checked ~ .library-tabs label[for="lib-tab-philosophy"],
+  #lib-tab-systems:checked ~ .library-tabs label[for="lib-tab-systems"],
+  #lib-tab-society:checked ~ .library-tabs label[for="lib-tab-society"],
+  #lib-tab-fiction:checked ~ .library-tabs label[for="lib-tab-fiction"] {
+    @apply text-zinc-100;
+  }
+  
+  .library-tabs label {
+    @apply text-zinc-500 hover:text-zinc-300;
+  }
+}
+
+/* Hide all panels by default */
+.lib-panel {
+  display: none;
+}
+
+/* Show panel when corresponding radio is checked */
+#lib-tab-strategy:checked ~ .library-panels #panel-strategy,
+#lib-tab-philosophy:checked ~ .library-panels #panel-philosophy,
+#lib-tab-systems:checked ~ .library-panels #panel-systems,
+#lib-tab-society:checked ~ .library-panels #panel-society,
+#lib-tab-fiction:checked ~ .library-panels #panel-fiction {
+  display: block;
+}
+
+/* ============================================
+   TL;DR DROPDOWN - CSS-ONLY
+   ============================================ */
+.tldr-dropdown {
+  @apply fixed bottom-6 right-6 z-40;
+}
+
+.tldr-dropdown summary {
+  @apply bg-white/90 backdrop-blur-sm border border-black/10 px-5 py-3 rounded-md shadow-lg text-sm font-medium text-black/80 hover:text-black hover:shadow-xl transition-all cursor-pointer list-none select-none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tldr-dropdown summary {
+    @apply bg-black/90 border-white/10 text-white/80 hover:text-white;
+  }
+}
+
+.tldr-dropdown[open] summary {
+  @apply shadow-xl;
+  margin-bottom: 0; /* Override global details[open] margin */
+}
+
+.tldr-dropdown .tldr-menu {
+  @apply absolute right-0 bottom-full mb-2 w-48 rounded-lg bg-white shadow-xl ring-1 ring-black/10 overflow-hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tldr-dropdown .tldr-menu {
+    @apply bg-black ring-white/10;
+  }
+}
+
+.tldr-dropdown .tldr-link {
+  @apply flex items-center justify-between w-full px-4 py-3 text-sm text-zinc-700 hover:bg-zinc-100 transition-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tldr-dropdown .tldr-link {
+    @apply text-zinc-300 hover:bg-zinc-900;
+  }
+}
+
+.tldr-dropdown .tldr-footer {
+  @apply border-t border-zinc-200 px-4 py-2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tldr-dropdown .tldr-footer {
+    @apply border-zinc-800;
+  }
+}
+
+/* ============================================
+   NATIVE IMAGE OPTIMIZATION
+   ============================================ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift */
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
 }

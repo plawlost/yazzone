@@ -3,10 +3,6 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 export async function GET(request: Request) {
-  const geistVariable = await fetch(
-    "https://fonts.gstatic.com/s/geist/v1/s_0d_fK7-5g-IVa-9k4.woff2"
-  ).then((res) => res.arrayBuffer());
-
   try {
     const { searchParams } = new URL(request.url)
 
@@ -23,66 +19,81 @@ export async function GET(request: Request) {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'black',
-            color: 'white',
-            fontFamily: '"Geist"',
-            padding: '40px',
+            justifyContent: 'flex-end',
+            backgroundColor: '#0a0a0a',
+            padding: '60px 80px',
+            fontFamily: 'Georgia, serif',
           }}
         >
+          {/* Large title - bottom aligned, left */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '32px',
+            }}
+          >
+            <div
+              style={{
+                fontSize: hasTitle ? 72 : 80,
+                fontWeight: 700,
+                color: '#ffffff',
+                lineHeight: 1.05,
+                letterSpacing: '-0.02em',
+                maxWidth: '1000px',
+              }}
+            >
+              {title}
+            </div>
+            
+            {/* Author line with hand-drawn asterisk */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+              }}
+            >
+              {/* Hand-drawn asterisk/star mark */}
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L12 22 M2 12 L22 12 M4 4 L20 20 M20 4 L4 20"
+                  stroke="#525252"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div
+                style={{
+                  fontSize: 24,
+                  color: '#737373',
+                  fontFamily: 'system-ui, sans-serif',
+                  fontWeight: 500,
+                }}
+              >
+                Yaz A. Caleb
+              </div>
+            </div>
+          </div>
+
+          {/* Corner URL */}
           <div
             style={{
               position: 'absolute',
-              top: 40,
-              left: 40,
-              display: 'flex',
-              alignItems: 'center',
-              fontSize: 24,
-              fontWeight: 700,
-            }}
-          >
-            Yaz A. Caleb
-          </div>
-
-          <div
-            style={{
-              fontSize: 72,
-              fontWeight: 700,
-              lineHeight: 1.1,
-              textAlign: 'center',
-              maxWidth: 1000,
-            }}
-          >
-            {title}
-          </div>
-
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 40,
-              right: 40,
-              display: 'flex',
-              alignItems: 'center',
+              top: '60px',
+              right: '80px',
               fontSize: 20,
-              fontWeight: 400,
-              color: '#999'
+              color: '#404040',
+              fontFamily: 'system-ui, sans-serif',
             }}
           >
-            yaz.one
+            yaz.zone
           </div>
         </div>
       ),
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Geist',
-            data: geistVariable,
-            style: 'normal',
-          },
-        ],
       }
     )
   } catch (e: any) {

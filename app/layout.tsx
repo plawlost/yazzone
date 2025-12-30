@@ -1,10 +1,21 @@
 import './global.css'
 import type { Metadata, Viewport } from 'next'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Atkinson_Hyperlegible, Literata } from 'next/font/google'
 import { baseUrl } from './sitemap'
-import { CookieNotice } from 'app/components/CookieNotice'
-import { ThemeProvider } from 'app/components/theme-provider'
+
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const literata = Literata({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -12,22 +23,31 @@ export const metadata: Metadata = {
     default: 'Yaz Caleb',
     template: '%s | Yaz Caleb',
   },
-  description: 'Founder, Thinker, Nonconformist.',
+  description: 'Left school at 16. Built my first company at 14. Now building what AI needs to run without asking permission.',
+  authors: [{ name: 'Yaz Caleb', url: baseUrl }],
+  creator: 'Yaz Caleb',
   openGraph: {
     title: 'Yaz Caleb',
-    description: 'Founder, Thinker, Nonconformist.',
+    description: 'Left school at 16. Built my first company at 14. Now building what AI needs to run without asking permission.',
     url: baseUrl,
     siteName: 'Yaz Caleb',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: `${baseUrl}/og`,
+        url: `${baseUrl}/yazzone-og.png`,
         width: 1200,
         height: 630,
         alt: 'Yaz Caleb',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yaz Caleb',
+    description: 'Left school at 16. Built my first company at 14. Now building what AI needs to run without asking permission.',
+    creator: '@yazcal',
+    images: [`${baseUrl}/yazzone-og.png`],
   },
   robots: {
     index: true,
@@ -45,21 +65,16 @@ export const metadata: Metadata = {
   },
   keywords: [
     'Yaz Caleb',
-    'Yagiz Celebi',
-    'Yagiz E Celebi',
     'Yaz A. Caleb',
-    'Yağız Erkam Çelebi',
-    'plawlost',
-    'founder',
-    'thinker',
-    'nonconformist',
-    'agent-native',
-    'AI',
-    'iconoclastic essays',
-    'PlawLabs',
+    'Yagiz Erkam Celebi',
+    'Plaw',
     'VulnZap',
-    'LLMStreet',
-    'Brief',
+    'Veto',
+    'AI agents',
+    'authorization',
+    'infrastructure',
+    'founder',
+    'essays',
   ],
 }
 
@@ -77,22 +92,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
+      className={`${atkinson.variable} ${literata.variable}`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet" />
-      </head>
-      <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
-            {children}
-            <Analytics />
-            <SpeedInsights />
-            <CookieNotice />
-          </main>
-        </ThemeProvider>
+
+      <body className="antialiased max-w-6xl mx-4 sm:mx-8 mt-12 lg:mx-auto font-sans">
+        <a id="top" aria-hidden="true" />
+        <main className="flex-auto min-w-0 mt-8 flex flex-col px-2 sm:px-4 md:px-8">
+          {children}
+        </main>
       </body>
     </html>
   )

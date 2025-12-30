@@ -1,8 +1,23 @@
 # yazzone
 
-This is the open-source code for my personal portfolio site, [yaz.zone](https://yaz.zone). 
+Personal site at [yaz.zone](https://yaz.zone).
 
-I believe in building in public, so feel free to fork this repository, explore the code, and adapt it to create your own personal website. It's built with Next.js and Tailwind CSS, and designed to be easily customizable.
+## Philosophy
+
+Zero client-side JavaScript for theme switching. Dark mode respects `prefers-color-scheme` because your OS already knows what you want. No hydration tax, no flash of wrong theme, no localStorage hacks.
+
+The whole thing is statically generated. Images are native `<img>` tags with proper `width`/`height` to prevent layout shift. CSS handles the tabs, dropdowns, and transitions. The browser is good at this stuff when you let it be.
+
+~87kB first load. Could be smaller but I like fonts.
+
+## Stack
+
+- Next.js 14 (App Router, static export)
+- Tailwind CSS
+- MDX for essays
+- No analytics, no cookies, no tracking
+
+Fork it, break it, make it yours.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

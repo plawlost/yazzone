@@ -11,6 +11,7 @@
 .yarn/sdks
 .yarn/versions
 .ignored_node_modules
+.opencode
 
 # TypeScript
 *.tsbuildinfo

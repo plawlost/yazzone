@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
 import React from 'react'
@@ -47,7 +46,17 @@ function CustomLink(props) {
 }
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+  return (
+    <img
+      alt={props.alt}
+      src={props.src}
+      width={props.width}
+      height={props.height}
+      loading="lazy"
+      decoding="async"
+      className="rounded-lg"
+    />
+  )
 }
 
 function Code({ children, ...props }) {
@@ -96,6 +105,7 @@ let components = {
   h5: createHeading(5),
   h6: createHeading(6),
   Image: RoundedImage,
+  img: RoundedImage,
   a: CustomLink,
   code: Code,
   Table,

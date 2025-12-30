@@ -10,6 +10,9 @@ const nextConfig = {
     ],
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  experimental: {
+    scrollRestoration: true,
+  },
 }
 
 export default nextConfig 
