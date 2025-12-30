@@ -2,7 +2,6 @@
 title: "Minimum Viable Parents"
 publishedAt: "2025-12-29"
 summary: "Founder traits and trauma responses are the same machinery."
-image: "/images/essays/mvp/cover.webp"
 featured: true
 ---
 
