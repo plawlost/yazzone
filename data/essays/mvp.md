@@ -13,9 +13,9 @@ featured: true
   </figcaption>
 </figure>
 
-I've noticed a pattern among ambitious people I know: a disproportionate number were raised by parents who provided everything except the thing that mattered.
+Here's something I keep running into. I'll be talking to someone who builds things—real things, companies, products—and eventually the childhood stuff comes up. And it's the same story, over and over. Parents who checked every box except the one that mattered.
 
-Food, shelter, school—all present. Encouragement, curiosity, emotional consistency—absent. These parents optimized for the wrong metric. They tracked inputs when the output that matters is unmeasurable: does your kid feel seen?
+The fridge was full. School fees paid. Roof solid. But encouragement? Curiosity about who you actually were? Consistency you could count on? Nowhere. These parents tracked inputs like quarterly metrics. The output they missed was unmeasurable: does your kid feel like you actually see them?
 
 I call this Minimum Viable Parenting. Like a startup MVP, it's the earliest version that technically ships. It passes inspection. It is not something anyone would recommend.
 
@@ -29,11 +29,11 @@ You can tell MVP parents by their response when challenged. They don't engage wi
 
 ## The Selection Effect
 
-The tech industry selects for MVP kids.
+Tech selects for these kids. Hard.
 
-What the environment produces: self-reliance, because no one was coming to help. Extreme work ethic, because external validation was unreliable so you learned to generate your own momentum. Social fluency, because someone had to produce warmth and it wasn't going to be them. High tolerance for ambiguity, because you grew up navigating unpredictable emotional weather.
+Think about what that environment actually produces. You learn to rely on yourself—nobody's coming. You develop a work ethic that borders on compulsive, because external validation was a slot machine so you learned to generate your own momentum. You get weirdly good at reading people and producing warmth, because someone had to and it wasn't going to be them. Ambiguity stops scaring you. You grew up never knowing which parent would walk through the door.
 
-These are founder traits. They're also trauma responses. Same machinery, different framing.
+VCs call these founder traits. Therapists call them trauma responses. It's the same machinery. Just depends who's labeling it.
 
 I've built things. I'm sixteen and I've shipped products, talked to users, figured out distribution. When I examine why I'm able to do this—why I can sustain focus on hard problems without anyone telling me it's going to work—I trace it back to the same source. No one was going to believe in my projects for me. So I learned to believe in them myself.
 
@@ -45,11 +45,11 @@ The cost shows up in specific ways.
 
 You can't turn off the radar. MVP kids develop extremely sensitive threat detection—reading micro-expressions, tracking emotional weather, anticipating instability. Useful for navigating investors, employees, customers. Exhausting when there's no actual threat.
 
-You can't receive help. Independence isn't a virtue when it's the only mode you have. I've caught myself refusing support I actually needed because accepting it felt dangerous. The logic, buried deep: depending on someone means they can disappear.
+You can't let people help you. I mean, you can—technically—but it feels wrong. Dangerous, almost. I've turned down support I genuinely needed, then rationalized it as independence. But that's not what it is. It's this: if you depend on someone, they can vanish. And you've seen that movie.
 
-You can't stop producing. Rest feels like laziness because your worth was never unconditional. You were valuable when you were useful—filling silences, managing emotions, performing stability. The pattern persists: I'm still most comfortable when I'm building something.
+You can't sit still. Rest feels like you're getting away with something. Your worth was always conditional—you were valuable when you were filling silences, managing someone else's emotions, being the stable one. I'm sixteen and I still feel most like myself when I'm mid-build on something. That's not entirely healthy. I know.
 
-You can't trust consistency. When early love was intermittent—warm one day, gone the next—you learn that good things don't last. So you don't relax into them. You're always waiting for the withdrawal.
+You can't trust good things. This one's subtle. When love showed up randomly—warm Tuesday, cold Wednesday, no reason for either—you learned that good doesn't stick around. So when things are good now, some part of you won't settle into it. You're bracing. Always half-waiting for the other version to walk through the door.
 
 ## The Impossible Key
 
@@ -71,13 +71,13 @@ The lesson isn't about any one person. It's that presence is a choice, and unlim
 
 ## Two Kinds of Confidence
 
-The MVP pattern explains something about high achievers. The ones with healthy backgrounds assume the world is basically fair, that effort correlates with outcomes. They're surprised when things don't work.
+This explains something I've seen in people who make things happen. The ones from stable homes carry this assumption—work hard, get results, world makes sense. When it doesn't, they're genuinely shocked. Like the rules broke.
 
-The MVP kids have a different confidence. They assume nothing. They don't expect the world to be fair. They've already survived conditions where effort didn't correlate with love, where the rules kept changing, where they had to generate their own belief from scratch.
+MVP kids don't have that assumption to lose. They already know effort doesn't guarantee anything. They watched themselves be perfect and still not get consistency. The rules were never stable to begin with.
 
-This makes them resilient in ways that look irrational. They keep building when there's no external validation. They're comfortable with ambiguity. They don't need permission.
+So they're resilient in ways that confuse people. No funding? Keep building. No validation? Keep building. Ambiguity everywhere? Fine, that's just Tuesday. They never learned to wait for permission because permission wasn't coming.
 
-It also makes them bad at enjoying success. The machinery that enabled the climb doesn't know how to stop climbing. The threat detection that kept them safe doesn't know the war is over.
+The downside: they can't stop. The machinery that got them here doesn't have an off switch. You spend years scanning for threats, you don't just... stop scanning because things got good. Some part of you is still waiting for it to fall apart.
 
 ## What I've Figured Out
 
@@ -99,8 +99,8 @@ The right question is: what does this kid need to feel seen?
 
 The first question produces compliance. The second produces a person.
 
-Most MVP parents will never understand this. They'll keep pointing at the refrigerator. But at some point you stop waiting for them to ask the right questions. You stop being the emotional generator for a house that never generates anything back.
+Most MVP parents won't get this. They'll keep pointing at the fridge, the tuition, the roof. Look at everything I gave you. And at some point—I don't know when exactly—you stop waiting for them to ask better questions. You stop being the one who generates all the warmth for a house that never warmed you back.
 
-You just build. Not to prove anything. Because building is the thing you're good at now, and you might as well do it for reasons that are actually yours.
+You build. Not to prove anything to them anymore. Just because it's what you're good at now, and you might as well do it for your own reasons.
 
-The best founders learned to believe in themselves because no one else was going to. The question is whether they can eventually let someone else believe in them too.
+I learned to believe in myself because the alternative was waiting forever. Most builders I know have a version of this story. The real question—the one I'm still figuring out—is whether you can eventually let someone else believe in you. Whether you can receive that without flinching.
