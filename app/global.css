@@ -347,7 +347,7 @@ a:hover {
   @apply block mt-2 text-sm text-neutral-600 not-italic;
 }
 .lead-figure figcaption {
-  @apply mt-3 text-center;
+  @apply mt-4 text-center;
 }
 .lead-figure .art-author {
   @apply block text-sm font-medium text-neutral-700;

@@ -31,7 +31,7 @@ You can tell MVP parents by their response when challenged. They don't engage wi
 
 The tech industry selects for MVP kids.
 
-Think about what the environment produces: self-reliance, because no one was coming to help. Extreme work ethic, because external validation was unreliable so you learned to generate your own momentum. Social fluency, because someone had to produce the household's warmth and it wasn't going to be them. High tolerance for ambiguity, because you grew up navigating unpredictable emotional weather.
+What the environment produces: self-reliance, because no one was coming to help. Extreme work ethic, because external validation was unreliable so you learned to generate your own momentum. Social fluency, because someone had to produce warmth and it wasn't going to be them. High tolerance for ambiguity, because you grew up navigating unpredictable emotional weather.
 
 These are founder traits. They're also trauma responses. Same machinery, different framing.
 
@@ -71,7 +71,7 @@ The lesson isn't about any one person. It's that presence is a choice, and unlim
 
 ## Two Kinds of Confidence
 
-The MVP pattern explains something I've observed in founders. The ones with healthy backgrounds have a particular kind of confidence—they assume the world is basically fair and that effort correlates with outcomes. They're often surprised when things don't work.
+The MVP pattern explains something about founders. The ones with healthy backgrounds assume the world is basically fair, that effort correlates with outcomes. They're surprised when things don't work.
 
 The MVP kids have a different confidence. They assume nothing. They don't expect the world to be fair. They've already survived conditions where effort didn't correlate with love, where the rules kept changing, where they had to generate their own belief from scratch.
 
@@ -81,7 +81,7 @@ It also makes them bad at enjoying success. The machinery that enabled the climb
 
 ## What I've Figured Out
 
-If you recognize this pattern, here's what I've learned:
+If you recognize this pattern:
 
 Audit your fuel. Building to prove something to a parent who'll never see you is an infinite treadmill. Check whether your drive comes from genuine curiosity or from a wound that can't be closed. The first scales. The second depletes.
 
