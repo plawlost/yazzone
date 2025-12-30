@@ -1,7 +1,7 @@
 ---
 title: "Minimum Viable Parents"
 publishedAt: "2025-12-29"
-summary: "Founder traits and trauma responses are the same machinery."
+summary: "The traits that make people build things and trauma responses are the same machinery."
 featured: true
 ---
 
@@ -13,7 +13,7 @@ featured: true
   </figcaption>
 </figure>
 
-I've noticed a pattern among founders I know: a disproportionate number were raised by parents who provided everything except the thing that mattered.
+I've noticed a pattern among ambitious people I know: a disproportionate number were raised by parents who provided everything except the thing that mattered.
 
 Food, shelter, school—all present. Encouragement, curiosity, emotional consistency—absent. These parents optimized for the wrong metric. They tracked inputs when the output that matters is unmeasurable: does your kid feel seen?
 
@@ -65,13 +65,13 @@ My father had been in prison most of my life—political reasons. I saw him mont
 
 What that taught me: constraints force intention. When time is scarce, you can't defer presence to tomorrow. You either show up or you don't.
 
-This generalizes. Founders with six months of runway often ship faster than those with three years. Students who work jobs often outperform those with unlimited study time. Scarcity clarifies. Abundance can obscure.
+This generalizes. Startups with six months of runway often ship faster than those with three years. Students who work jobs often outperform those with unlimited study time. Scarcity clarifies. Abundance can obscure.
 
 The lesson isn't about any one person. It's that presence is a choice, and unlimited availability can make it easy to keep choosing tomorrow.
 
 ## Two Kinds of Confidence
 
-The MVP pattern explains something about founders. The ones with healthy backgrounds assume the world is basically fair, that effort correlates with outcomes. They're surprised when things don't work.
+The MVP pattern explains something about high achievers. The ones with healthy backgrounds assume the world is basically fair, that effort correlates with outcomes. They're surprised when things don't work.
 
 The MVP kids have a different confidence. They assume nothing. They don't expect the world to be fair. They've already survived conditions where effort didn't correlate with love, where the rules kept changing, where they had to generate their own belief from scratch.
 
@@ -103,4 +103,4 @@ Most MVP parents will never understand this. They'll keep pointing at the refrig
 
 You just build. Not to prove anything. Because building is the thing you're good at now, and you might as well do it for reasons that are actually yours.
 
-The best founders learned to believe in themselves because no one else was going to. The question is whether they can eventually let someone else believe in them too.
+The best builders learned to believe in themselves because no one else was going to. The question is whether they can eventually let someone else believe in them too.
