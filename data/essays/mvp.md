@@ -63,11 +63,9 @@ So you spend years trying to find the key. You optimize yourself. You achieve th
 
 My father has been in prison most of my life—political reasons. I see him monthly through glass. An hour isn't a relationship. It's maintenance.
 
-What I noticed: even from prison, he was more present than my mother at the dinner table. He had limited time, so he used it. She had unlimited time and used none of it.
+What I noticed: he was more present in that hour than many parents are in a week. Scarcity forced intention. When you only have sixty minutes, you don't waste them.
 
-Scarcity forced him to optimize for what mattered. Abundance let her optimize for what was easy.
-
-This is counterintuitive but I think it's true: the parent who's physically present but emotionally absent does more damage than the one who's physically gone but actually shows up when they can. The first teaches you that you're not worth attention even when attention is available. The second teaches you that circumstances can be cruel but people can still try.
+This taught me something counterintuitive: constraints can produce presence. The parent who has limited time but uses it fully can do more than the one who has unlimited time but treats it as infinite. The first teaches you that people can show up despite circumstances. The second teaches you that availability isn't the same as attention.
 
 ## Two Kinds of Confidence
 
