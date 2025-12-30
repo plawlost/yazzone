@@ -52,6 +52,24 @@ export function History() {
         <div className="flex items-start space-x-3">
           <span className="text-zinc-500 dark:text-zinc-400 pt-1">•</span>
           <div>
+            <p className="font-medium">
+              <a
+                href="https://sorana.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Sorana
+              </a>
+            </p>
+            <p className="text-zinc-500 dark:text-zinc-400">
+              Decentralized search. Web3 authenticity layer.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start space-x-3">
+          <span className="text-zinc-500 dark:text-zinc-400 pt-1">•</span>
+          <div>
             <p className="font-medium">Clade AI</p>
             <p className="text-zinc-500 dark:text-zinc-400">
               Hardware AI assistant. 30+ people, shut down.
