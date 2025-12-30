@@ -487,12 +487,12 @@ details[open] > summary {
 }
 
 .library-tab-label {
-  @apply cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600;
+  @apply cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700;
 }
 
 @media (prefers-color-scheme: dark) {
   .library-tab-label {
-    @apply text-zinc-500 hover:text-zinc-300;
+    @apply text-zinc-400 hover:text-zinc-200;
   }
 }
 
@@ -533,7 +533,7 @@ details[open] > summary {
   }
   
   .library-tabs label {
-    @apply text-zinc-500 hover:text-zinc-300;
+    @apply text-zinc-400 hover:text-zinc-200;
   }
 }
 

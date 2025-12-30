@@ -28,5 +28,11 @@
   },
   "devDependencies": {
     "esbuild-register": "^3.6.0"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 92",
+    "Firefox >= 90",
+    "Safari >= 15",
+    "Edge >= 92"
+  ]
 }

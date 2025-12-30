@@ -111,7 +111,7 @@ export default function Page() {
         <header className="flex flex-col space-y-4">
           <div className="flex items-center space-x-4">
             <img
-              src="/favicon.ico"
+              src="/favicon-64.png"
               alt="Yaz Caleb"
               width={64}
               height={64}
@@ -197,10 +197,12 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-1 film-grain">
               <img
-                src="/yaz-latest.webp"
+                src="/yaz-latest-sm.webp"
+                srcSet="/yaz-latest-sm.webp 449w, /yaz-latest.webp 1031w"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 alt="Yaz Caleb"
-                width={1031}
-                height={1834}
+                width={449}
+                height={800}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-auto max-h-[550px] md:max-h-none md:max-w-none rounded-md grayscale contrast-[1.1] brightness-[1.1] object-cover object-[center_20%]"
@@ -209,10 +211,12 @@ export default function Page() {
             <div className="md:col-span-2 flex flex-col justify-end">
             <div className="film-grain">
               <img
-                src="/yazpic2.webp"
+                src="/yazpic2-sm.webp"
+                srcSet="/yazpic2-sm.webp 800w, /yazpic2.webp 1668w"
+                sizes="(max-width: 768px) 100vw, 66vw"
                 alt="Yaz A. Caleb in childhood"
-                width={600}
-                height={400}
+                width={800}
+                height={480}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-auto object-cover rounded-md grayscale contrast-[1.1]"
@@ -227,7 +231,7 @@ export default function Page() {
           </div>
         </section>
 
-        <p className="text-sm text-zinc-400 dark:text-zinc-500 italic max-w-xl">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 italic max-w-xl">
           "When you build a thing you cannot merely build that thing in isolation, but must repair the world around it, and within it." — Christopher Alexander
         </p>
 

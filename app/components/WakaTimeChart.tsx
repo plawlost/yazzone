@@ -98,7 +98,7 @@ export async function WakaTimeChart() {
               style={{ backgroundColor: lang.color || '#8b8b8b' }}
             />
             <span className="text-zinc-600 dark:text-zinc-400">{lang.name}</span>
-            <span className="text-zinc-400 dark:text-zinc-500">{lang.percent.toFixed(1)}%</span>
+            <span className="text-zinc-500 dark:text-zinc-400">{lang.percent.toFixed(1)}%</span>
           </div>
         ))}
       </div>

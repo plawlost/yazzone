@@ -127,31 +127,31 @@ export function Library() {
           <div className="library-tabs flex flex-wrap gap-x-4 gap-y-1 text-sm">
             <label
               htmlFor="lib-tab-strategy"
-              className="cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600"
+              className="cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               Strategy
             </label>
             <label
               htmlFor="lib-tab-philosophy"
-              className="cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600"
+              className="cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               Philosophy
             </label>
             <label
               htmlFor="lib-tab-systems"
-              className="cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600"
+              className="cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               Systems
             </label>
             <label
               htmlFor="lib-tab-society"
-              className="cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600"
+              className="cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               Society
             </label>
             <label
               htmlFor="lib-tab-fiction"
-              className="cursor-pointer transition-colors text-zinc-400 hover:text-zinc-600"
+              className="cursor-pointer transition-colors text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-200"
             >
               Fiction
             </label>
