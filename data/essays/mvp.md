@@ -57,17 +57,19 @@ Research backs this up. Inconsistent parenting produces worse outcomes than cons
 
 MVP kids develop a specific belief: I am the variable. If I were better, smarter, less needy, then the warmth would stabilize. This is wrong. But it's the only model that preserves agency. The alternative—love is random and I can't control it—is too destabilizing to accept.
 
-So you spend years trying to find the key. You optimize yourself. You achieve things. The key never appears, because there was no key.
+So you spend years trying to find the key. You optimize yourself. You achieve things. The key never appears, because there was no key. The door was never locked. They just weren't home.
 
-## The Counterintuitive Truth
+## The Glass
 
-My father had been in prison most of my life—political reasons. I saw him monthly through glass.
+My father was in prison most of my life. Political reasons—he wrote things the government didn't like. I saw him through glass, once a month, maybe twice if we were lucky.
 
-What that taught me: constraints force intention. When time is scarce, you can't defer presence to tomorrow. You either show up or you don't.
+Here's what I remember. I'd prepare things to tell him all week. Small things—a grade, a project, something funny that happened. I'd rehearse them in my head on the drive there. Then we'd sit on opposite sides of the glass and I'd have maybe twenty minutes. No hugs. No silence that wasn't expensive. Every second had to carry weight.
 
-This generalizes. Startups with six months of runway often ship faster than those with three years. Students who work jobs often outperform those with unlimited study time. Scarcity clarifies. Abundance can obscure.
+He couldn't help me with homework. Couldn't come to anything. Couldn't be there when things fell apart. By every metric, he was the more absent parent. But here's what's strange: I never doubted he saw me. When we talked through that glass, I had his complete attention. The constraint made presence non-negotiable.
 
-The lesson isn't about any one person. It's that presence is a choice, and unlimited availability can make it easy to keep choosing tomorrow.
+I think about this a lot. The parent who was physically there every day but mentally checked out. The parent behind glass who was entirely present for twenty minutes a month. Which one was the MVP?
+
+Presence isn't proximity. Some people are there every day and never once make you feel seen. Some people are separated by concrete and glass and still manage to show up completely.
 
 ## Two Kinds of Confidence
 
@@ -79,17 +81,13 @@ So they're resilient in ways that confuse people. No funding? Keep building. No 
 
 The downside: they can't stop. The machinery that got them here doesn't have an off switch. You spend years scanning for threats, you don't just... stop scanning because things got good. Some part of you is still waiting for it to fall apart.
 
-## What I've Figured Out
+## The Real Work
 
-If you recognize this pattern:
+The thing nobody tells you is that the traits that got you out are not the traits that let you live. The hypervigilance, the self-reliance, the ability to generate your own belief from nothing—these are survival tools. They work. But you can't white-knuckle your way through an entire life.
 
-Audit your fuel. Building to prove something to a parent who'll never see you is an infinite treadmill. Check whether your drive comes from genuine curiosity or from a wound that can't be closed. The first scales. The second depletes.
+At some point you have to learn the things you skipped. How to rest without guilt. How to receive without suspicion. How to let good things be good without waiting for the catch.
 
-Turn down the radar. You're excellent at reading rooms. You're also running threat detection on situations that don't require it. The room will not collapse if you stop scanning.
-
-Practice receiving. Your independence is a scar, not a virtue. Letting people help isn't weakness. It's a skill you never learned because the early help wasn't reliable.
-
-Find the real key. You spent years trying to unlock consistent love from an inconsistent source. There was no key. That game is over. The new game is building things for reasons that are actually yours.
+I'm not there yet. I'm sixteen. I'm still more comfortable building than sitting still, still better at giving warmth than receiving it, still scanning rooms I don't need to scan. But I know the work now. That's something.
 
 ## The Right Question
 
@@ -99,8 +97,12 @@ The right question is: what does this kid need to feel seen?
 
 The first question produces compliance. The second produces a person.
 
-Most MVP parents won't get this. They'll keep pointing at the fridge, the tuition, the roof. Look at everything I gave you. And at some point—I don't know when exactly—you stop waiting for them to ask better questions. You stop being the one who generates all the warmth for a house that never warmed you back.
+Most MVP parents won't get this. They'll keep pointing at the fridge, the tuition, the roof. And at some point—I don't know when exactly—you stop waiting for them to ask better questions. You stop being the one who generates all the warmth for a house that never warmed you back.
 
 You build. Not to prove anything to them anymore. Just because it's what you're good at now, and you might as well do it for your own reasons.
 
-I learned to believe in myself because the alternative was waiting forever. Most builders I know have a version of this story. The real question—the one I'm still figuring out—is whether you can eventually let someone else believe in you. Whether you can receive that without flinching.
+I learned to believe in myself because the alternative was waiting forever. What I'm still learning is harder: how to let someone else believe in me too. How to be seen without flinching.
+
+The glass taught me that presence is a choice. Now I have to learn to stay present when there's no glass forcing it—when I could check out, when I could retreat into building, when I could scan the room instead of being in it.
+
+That's the real work. Not the building. The staying.
