@@ -188,27 +188,21 @@ export default function Blog({ params }: { params: { slug: string } }) {
       <TldrDropdown title={post.metadata.title} slug={post.slug} />
       </div>
 
-      <footer className="mx-auto max-w-2xl mt-16 border-t border-black/10 dark:border-white/10 pt-8">
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 dark:text-neutral-400 mb-3">Read next</h3>
-            <ul className="space-y-2">
-              {readNext.map((e) => (
-                <li key={e.slug}>
-                  <Link href={`/essays/${e.slug}`} className="underline decoration-1 underline-offset-2">
-                    {e.metadata.title}
-                  </Link>
-                  <span className="ml-2 text-xs text-neutral-500 dark:text-neutral-400">{formatDate(e.metadata.publishedAt)}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
-              — <Link href="/" className="underline decoration-1 underline-offset-2">Yaz</Link>
-            </p>
-          </div>
-        </div>
+      <footer className="mx-auto max-w-2xl mt-20 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+        <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-6">
+          — <Link href="/" className="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Yaz</Link>
+        </p>
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          {readNext.slice(0, 3).map((e) => (
+            <Link 
+              key={e.slug}
+              href={`/essays/${e.slug}`} 
+              className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+            >
+              {e.metadata.title}
+            </Link>
+          ))}
+        </nav>
       </footer>
     </section>
   )
