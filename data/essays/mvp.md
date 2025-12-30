@@ -61,11 +61,13 @@ So you spend years trying to find the key. You optimize yourself. You achieve th
 
 ## The Counterintuitive Truth
 
-My father has been in prison most of my life—political reasons. I see him monthly through glass. An hour isn't a relationship. It's maintenance.
+My father has been in prison most of my life—political reasons. I see him monthly through glass.
 
-What I noticed: he was more present in that hour than many parents are in a week. Scarcity forced intention. When you only have sixty minutes, you don't waste them.
+What that taught me: constraints force intention. When time is scarce, you can't defer presence to tomorrow. You either show up or you don't.
 
-This taught me something counterintuitive: constraints can produce presence. The parent who has limited time but uses it fully can do more than the one who has unlimited time but treats it as infinite. The first teaches you that people can show up despite circumstances. The second teaches you that availability isn't the same as attention.
+This generalizes. Founders with six months of runway often ship faster than those with three years. Students who work jobs often outperform those with unlimited study time. Scarcity clarifies. Abundance can obscure.
+
+The lesson isn't about any one person. It's that presence is a choice, and unlimited availability can make it easy to keep choosing tomorrow.
 
 ## Two Kinds of Confidence
 
