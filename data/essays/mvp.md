@@ -103,4 +103,4 @@ Most MVP parents will never understand this. They'll keep pointing at the refrig
 
 You just build. Not to prove anything. Because building is the thing you're good at now, and you might as well do it for reasons that are actually yours.
 
-The best builders learned to believe in themselves because no one else was going to. The question is whether they can eventually let someone else believe in them too.
+The best founders learned to believe in themselves because no one else was going to. The question is whether they can eventually let someone else believe in them too.
