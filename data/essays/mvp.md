@@ -61,7 +61,7 @@ So you spend years trying to find the key. You optimize yourself. You achieve th
 
 ## The Glass
 
-My father was in prison most of my life. Political reasons—he wrote things the government didn't like. I saw him through glass, once a month, maybe twice if we were lucky.
+My father was in prison most of my life. Political reasons—he was a governor who wouldn't play along. I saw him through glass, once a month, maybe twice if we were lucky.
 
 Here's what I remember. I'd prepare things to tell him all week. Small things—a grade, a project, something funny that happened. I'd rehearse them in my head on the drive there. Then we'd sit on opposite sides of the glass and I'd have maybe twenty minutes. No hugs. No silence that wasn't expensive. Every second had to carry weight.
 
