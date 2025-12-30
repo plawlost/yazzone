@@ -61,7 +61,7 @@ So you spend years trying to find the key. You optimize yourself. You achieve th
 
 ## The Counterintuitive Truth
 
-My father has been in prison most of my life—political reasons. I see him monthly through glass.
+My father had been in prison most of my life—political reasons. I saw him monthly through glass.
 
 What that taught me: constraints force intention. When time is scarce, you can't defer presence to tomorrow. You either show up or you don't.
 
