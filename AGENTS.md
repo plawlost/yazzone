@@ -12,7 +12,7 @@ No test runner configured. Use `pnpm build` to catch type errors.
 - **Imports**: Node built-ins first, then external packages, then local modules
 - **Types**: Define types in-file (see `app/essays/utils.ts:5-14`). `strict: false` but `strictNullChecks: true`
 - **Naming**: PascalCase components, camelCase functions/variables, kebab-case files
-- **Components**: Functional with TypeScript, use `next-themes` for dark mode
+- **Components**: Functional with TypeScript, dark mode via `prefers-color-scheme` (no JS)
 - **Errors**: Return `undefined` for missing data (no throwing), let Next.js handle 404s
 
 ## Structure
