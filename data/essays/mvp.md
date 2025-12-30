@@ -5,10 +5,13 @@ summary: "Founder traits and trauma responses are the same machinery."
 featured: true
 ---
 
-<p class="lead-figure">
+<figure class="lead-figure">
   <img src="/images/essays/mvp/cover.webp" alt="Interior, Strandgade 30 by Vilhelm Hammershøi, 1906" />
-  <em>Vilhelm Hammershøi, "Interior, Strandgade 30", 1906</em>
-</p>
+  <figcaption>
+    <span class="art-author">Vilhelm Hammershøi</span>
+    <span class="art-title">"Interior, Strandgade 30", 1906</span>
+  </figcaption>
+</figure>
 
 I've noticed a pattern among founders I know: a disproportionate number were raised by parents who provided everything except the thing that mattered.
 

@@ -346,10 +346,25 @@ a:hover {
 .lead-figure em {
   @apply block mt-2 text-sm text-neutral-600 not-italic;
 }
+.lead-figure figcaption {
+  @apply mt-3 text-center;
+}
+.lead-figure .art-author {
+  @apply block text-sm font-medium text-neutral-700;
+}
+.lead-figure .art-title {
+  @apply block text-sm text-neutral-500 italic;
+}
 
 @media (prefers-color-scheme: dark) {
   .lead-figure em {
     @apply text-neutral-400;
+  }
+  .lead-figure .art-author {
+    @apply text-neutral-300;
+  }
+  .lead-figure .art-title {
+    @apply text-neutral-500;
   }
 }
 
