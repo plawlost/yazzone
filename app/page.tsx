@@ -101,7 +101,7 @@ export default function Page() {
               '@type': 'EducationalOrganization',
               name: 'Arizona State University',
             },
-            birthDate: '2008',
+            birthDate: '2009',
             nationality: 'Turkish',
           }),
         }}
